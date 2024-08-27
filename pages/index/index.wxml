@@ -1,0 +1,70 @@
+<view class="headers">
+    <view class="backgroundView">
+        <view class="headerSearch">
+            <view class="images">
+                <image src="../../static/search.png" mode=""/>
+            </view>
+            <input type="text"  placeholder-class="c-placeholder" placeholder="请输入您要搜索的医生"/>
+            <view class="searchBtn">搜索</view>
+        </view>
+        <view class="cardView"></view>
+    </view>
+</view>
+
+<view class="funcBtns">
+    <view class="btns">
+        <view class="images"></view>
+        <view class="title">当日挂号</view>
+    </view>
+    <view class="btns">
+        <view class="images"></view>
+        <view class="title">智能导诊</view>
+    </view>
+</view>
+
+<view class="banners"></view>
+
+<view class="banners"></view>
+
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="门诊服务">
+    <view class="tabsView">
+        <view wx:for="{{ mzList }}" class="funcBtnRows" bind:tap="toPage" data-item="{{ item }}" data-type="mz">
+            <view class="icon"></view>
+            <view class="titles">{{ item.title }}</view>
+        </view>
+    </view>
+  </van-tab>
+  <van-tab title="住院服务">
+    <view class="tabsView">
+        <view class="tabsView">
+            <view wx:for="{{ zyList }}" class="funcBtnRows">
+                <view class="icon"></view>
+                <view class="titles">{{ item.title }}</view>
+            </view>
+        </view>
+    </view>
+  </van-tab>
+  <van-tab title="体检服务">
+    <view class="tabsView">
+        <view class="tabsView">
+            <view class="tabsView">
+                <view wx:for="{{ tjList }}" class="funcBtnRows">
+                    <view class="icon"></view>
+                    <view class="titles">{{ item.title }}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+  </van-tab>
+  <van-tab title="科室介绍">
+    <view class="tabsView"></view>
+  </van-tab>
+</van-tabs>
+
+
+
+
+
+
+<view style="height: 200rpx;"></view>

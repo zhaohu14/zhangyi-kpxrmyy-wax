@@ -1,0 +1,151 @@
+.headers {
+    width: 100%;
+    height: 400rpx;
+    /* background-color: #4c87fd; */
+    /* border-bottom-left-radius: 120rpx;
+    border-bottom-right-radius: 120rpx; */
+    overflow: hidden;
+    position: relative;
+}
+
+.headers .backgroundView {
+    width: 120%;
+    background-color: #4c87fd;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    height: 80%;
+    position: absolute;
+    left: -10%;
+}
+
+.headers .backgroundView .headerSearch {
+    width: 80%;
+    height: 80rpx;
+    margin-left: 10%;
+    background-color: #709ffe;
+    border-radius: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headers .backgroundView .headerSearch .images {
+    width: 40rpx;
+    height: 40rpx;
+}
+.headers .backgroundView .headerSearch .images image {
+    width: 100%;
+    height: 100%;
+}
+
+.headerSearch input {
+    width: 60%;
+    color: #fff;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+}
+.c-placeholder {
+    color: #fff;
+}
+
+.headerSearch .searchBtn {
+    padding-left: 20rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-left: 1rpx solid #fff;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.backgroundView .cardView {
+    width: 70%;
+    height: 300rpx;
+    margin-left: 15%;
+    margin-top: 20rpx;
+    background-color: #dbdbdb;
+    border-radius: 20rpx;
+}
+
+.funcBtns {
+    width: 100%;
+    height: 220rpx;
+    /* border: 1rpx solid #dbdbdb; */
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.funcBtns .btns {
+    width: 40%;
+    height: 200rpx;
+    border: 1rpx solid #dbdbdb;
+    margin: auto;
+    padding-top: 20rpx;
+    border-radius: 30rpx;
+}
+
+.funcBtns .btns .images {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 60rpx;
+    border: 1rpx solid #dbdbdb;
+    margin: 0 auto;
+}
+.funcBtns .btns .title {
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    margin-top: 20rpx;
+    font-weight: 600;
+}
+
+.banners {
+    width: 95%;
+    height: 180rpx;
+    border-radius: 20rpx;
+    margin-left: 2.5%;
+    border: 1rpx solid #dbdbdb;
+    margin-top: 30rpx;
+}
+
+.tabsView {
+    width: 95%;
+    min-height: 200rpx;
+    margin-left: 2.5%;
+    /* border: 1rpx solid #dbdbdb; */
+    display: flex;
+    flex-direction: row; /* 默认值，可以省略 */
+    flex-wrap: wrap;
+}
+.tabsView .funcBtnRows {
+    width: 24%;
+    /* margin: 2%; */
+    height: 140rpx;
+    /* border: 1rpx solid #dbdbdb; */
+    padding-top: 10rpx;
+}
+
+.tabsView .funcBtnRows .icon {
+    width: 80rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1rpx solid #dbdbdb;
+}
+
+.tabsView .funcBtnRows .icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.tabsView .funcBtnRows .titles {
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: 600;
+}
