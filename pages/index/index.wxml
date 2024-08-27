@@ -26,10 +26,10 @@
 
 <view class="banners"></view>
 
-<van-tabs active="{{ active }}" bind:change="onChange">
+<van-tabs active="{{ active }}" bind:change="onChange" animated swipeable>
   <van-tab title="门诊服务">
     <view class="tabsView">
-        <view wx:for="{{ mzList }}" class="funcBtnRows" bind:tap="toPage" data-item="{{ item }}" data-type="mz">
+        <view wx:for="{{ mzList }}" class="funcBtnRows" bind:tap="toPage" data-item="{{ item }}" data-type="mz" wx:key="id">
             <view class="icon"></view>
             <view class="titles">{{ item.title }}</view>
         </view>
@@ -38,7 +38,7 @@
   <van-tab title="住院服务">
     <view class="tabsView">
         <view class="tabsView">
-            <view wx:for="{{ zyList }}" class="funcBtnRows">
+            <view wx:for="{{ zyList }}" class="funcBtnRows" wx:key="id">
                 <view class="icon"></view>
                 <view class="titles">{{ item.title }}</view>
             </view>
@@ -49,7 +49,7 @@
     <view class="tabsView">
         <view class="tabsView">
             <view class="tabsView">
-                <view wx:for="{{ tjList }}" class="funcBtnRows">
+                <view wx:for="{{ tjList }}" class="funcBtnRows" wx:key="id">
                     <view class="icon"></view>
                     <view class="titles">{{ item.title }}</view>
                 </view>
@@ -58,7 +58,16 @@
     </view>
   </van-tab>
   <van-tab title="科室介绍">
-    <view class="tabsView"></view>
+    <view class="tabsView">
+        <view class="tabsView">
+            <view class="tabsView">
+                <view wx:for="{{ ksjsList }}" class="funcBtnRows" wx:key="id">
+                    <view class="icon"></view>
+                    <view class="titles">{{ item.title }}</view>
+                </view>
+            </view>
+        </view>
+    </view>
   </van-tab>
 </van-tabs>
 

@@ -6,7 +6,7 @@ Page({
         {
             title: '绑卡',
             icon: '',
-            url: '',
+            url: '/menzhen/addErhcCard/addErhcCard',
             id: 0
         },
         {
@@ -102,7 +102,8 @@ Page({
     ]
   },
   onLoad () {},
-  onShow () {},
+  onShow () {
+  },
   toPage (e) {
       const dataset = e.currentTarget.dataset
       if (dataset.type === 'mz') {
@@ -114,8 +115,14 @@ Page({
   },
   toMzPage (item) {
       /* 需要先判断登录状态和绑卡状态后继续执行方法 */
+      if (!item.url.length) {
+          return wx.showToast({
+            title: '暂未开放',
+            icon: 'none'
+          })
+      }
       wx.navigateTo({
-        url: '/menzhen/ksList/ksList',
+        url: item.url,
       })
   }
 })
