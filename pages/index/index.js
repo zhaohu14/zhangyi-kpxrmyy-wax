@@ -112,6 +112,13 @@ Page({
         return this.toZyPage(dataset.item)
     }
   },
+  toYYGH (e) {
+      console.log(e)
+      let url = '/menzhen/ksList/ksList?type=' + e.currentTarget.dataset.type
+      let item = {}
+      item.url = url
+      this.toMzPage(item)
+  },
   toMzPage (item) {
       /* 需要先判断登录状态和绑卡状态后继续执行方法 */
       if (!item.url.length) {

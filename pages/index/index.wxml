@@ -2,9 +2,9 @@
     <view class="backgroundView">
         <view class="headerSearch">
             <view class="images">
-                <image src="../../static/search.png" mode=""/>
+                <image src="../../static/search.png" mode="" />
             </view>
-            <input type="text"  placeholder-class="c-placeholder" placeholder="请输入您要搜索的医生"/>
+            <input type="text" placeholder-class="c-placeholder" placeholder="请输入您要搜索的医生" />
             <view class="searchBtn">搜索</view>
         </view>
         <view class="cardView"></view>
@@ -13,15 +13,15 @@
 
 <view class="btnFather">
     <view class="funcBtns">
-        <view class="btns">
-        <image class="bgImage" src="../../static/home/drgh.png" mode=""/>
+        <view class="btns" bind:tap="toYYGH" data-type="DR">
+            <image class="bgImage" src="../../static/home/drgh.png" mode="" />
             <view class="title">
                 <view>当日挂号</view>
                 <view>门诊手机在线挂号</view>
             </view>
         </view>
-        <view class="btns">
-            <image class="bgImage" src="../../static/home/yygh.png" mode=""/>
+        <view class="btns" bind:tap="toYYGH" data-type="YY">
+            <image class="bgImage" src="../../static/home/yygh.png" mode="" />
             <view class="title">
                 <view>预约挂号</view>
                 <view>手机在线预约</view>
@@ -30,14 +30,14 @@
     </view>
     <view class="funcBtns" style="margin-top: -10rpx;">
         <view class="btns">
-            <image class="bgImage" src="../../static/home/jf.png" mode=""/>
+            <image class="bgImage" src="../../static/home/jf.png" mode="" />
             <view class="title">
                 <view>缴费</view>
                 <view>门诊手机立马缴费</view>
             </view>
         </view>
         <view class="btns">
-            <image class="bgImage" src="../../static/home/bgck.png" mode=""/>
+            <image class="bgImage" src="../../static/home/bgck.png" mode="" />
             <view class="title">
                 <view>报告单</view>
                 <view>手机在线查看报告单</view>
@@ -47,37 +47,22 @@
 </view>
 
 <van-tabs active="{{ active }}" animated swipeable color="#4c87fd" title-active-color="#4c87fd">
-  <van-tab title="门诊服务">
-    <view class="tabsView">
-        <view wx:for="{{ mzList }}" class="funcBtnRows" bind:tap="toPage" data-item="{{ item }}" data-type="mz" wx:key="id">
-            <view class="icon">
-                <image src="{{ item.icon }}" mode=""/>
-            </view>
-            <view class="titles">{{ item.title }}</view>
-        </view>
-    </view>
-  </van-tab>
-  <van-tab title="住院服务">
-    <view class="tabsView">
+    <van-tab title="门诊服务">
         <view class="tabsView">
-            <view wx:for="{{ zyList }}" class="funcBtnRows" wx:key="id">
+            <view wx:for="{{ mzList }}" class="funcBtnRows" bind:tap="toPage" data-item="{{ item }}" data-type="mz" wx:key="id">
                 <view class="icon">
-                    <image src="{{ item.icon }}" mode=""/>
+                    <image src="{{ item.icon }}" mode="" />
                 </view>
-                <view class="titles">
-                    <text>{{ item.title }}</text>
-                </view>
+                <view class="titles">{{ item.title }}</view>
             </view>
         </view>
-    </view>
-  </van-tab>
-  <van-tab title="排队候诊">
-    <view class="tabsView">
+    </van-tab>
+    <van-tab title="住院服务">
         <view class="tabsView">
             <view class="tabsView">
-                <view wx:for="{{ pdhzList }}" class="funcBtnRows" wx:key="id">
+                <view wx:for="{{ zyList }}" class="funcBtnRows" wx:key="id">
                     <view class="icon">
-                        <image src="{{ item.icon }}" mode=""/>
+                        <image src="{{ item.icon }}" mode="" />
                     </view>
                     <view class="titles">
                         <text>{{ item.title }}</text>
@@ -85,8 +70,23 @@
                 </view>
             </view>
         </view>
-    </view>
-  </van-tab>
+    </van-tab>
+    <van-tab title="排队候诊">
+        <view class="tabsView">
+            <view class="tabsView">
+                <view class="tabsView">
+                    <view wx:for="{{ pdhzList }}" class="funcBtnRows" wx:key="id">
+                        <view class="icon">
+                            <image src="{{ item.icon }}" mode="" />
+                        </view>
+                        <view class="titles">
+                            <text>{{ item.title }}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </van-tab>
 </van-tabs>
 
 <view class="bottomfuncView">
@@ -97,7 +97,7 @@
         <view class="l c">
             <view class="title">医院信息</view>
             <view class="smallTitle">医院简介、科室简介等信息</view>
-            <image src="../../static/home/bottom1.png" mode=""/>
+            <image src="../../static/home/bottom1.png" mode="" />
         </view>
         <view class="r c">
             <view class="c-1">
@@ -105,14 +105,14 @@
                     <view class="other1">医院地图</view>
                     <view>科室楼层分布导航</view>
                 </view>
-                <image src="../../static/home/bottom2.png" mode=""/>
+                <image src="../../static/home/bottom2.png" mode="" />
             </view>
             <view class="c-1">
                 <view class="smallTitles">
                     <view class="other2">医院地图</view>
                     <view>科室楼层分布导航</view>
                 </view>
-                <image src="../../static/home/bottom3.png" mode=""/>
+                <image src="../../static/home/bottom3.png" mode="" />
             </view>
         </view>
     </view>
