@@ -22,11 +22,7 @@
     </view>
 </view>
 
-<view class="banners"></view>
-
-<view class="banners"></view>
-
-<van-tabs active="{{ active }}" bind:change="onChange" animated swipeable>
+<van-tabs active="{{ active }}" animated swipeable color="#4c87fd" title-active-color="#4c87fd">
   <van-tab title="门诊服务">
     <view class="tabsView">
         <view wx:for="{{ mzList }}" class="funcBtnRows" bind:tap="toPage" data-item="{{ item }}" data-type="mz" wx:key="id">
@@ -71,6 +67,18 @@
   </van-tab>
 </van-tabs>
 
+<view class="bottomfuncView">
+    <view class="bottomTitles">
+        <view>微官网</view>
+    </view>
+    <view class="gwViews">
+        <view class="l c"></view>
+        <view class="r c">
+            <view></view>
+            <view></view>
+        </view>
+    </view>
+</view>
 
 
 

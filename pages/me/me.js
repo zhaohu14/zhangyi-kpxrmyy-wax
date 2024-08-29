@@ -1,33 +1,18 @@
-// menzhen/ksList/ksList.js
-const { indexedSubject } = require('../../utils/API')
+// pages/me/me.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-     list: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-      this.getList()
-  },
-  getList () {
-    indexedSubject().then(ret => {
-        this.setData({
-            list: ret.list
-        })
-    })
-  },
-  toPaiBan (e) {
-    //   console.log(e)
-    const subjects = e.currentTarget.dataset.subjects
-    wx.navigateTo({
-      url: '/menzhen/paiban/paiban?deptCode=' + subjects.code + '&name=' + subjects.name,
-    })
+
   },
 
   /**

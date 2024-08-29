@@ -16,7 +16,7 @@ App({
   globalData: {
     cardInfo: null,
     isLogin: false,
-    BASE_URL: '',
+    BASE_URL: 'https://zp.ngrok.do-it.cn',
     token: null
   }
 })

@@ -1,3 +1,6 @@
+page {
+    background-color: rgb(236, 243, 247);
+}
 .headers {
     width: 100%;
     height: 400rpx;
@@ -6,6 +9,8 @@
     border-bottom-right-radius: 120rpx; */
     overflow: hidden;
     position: relative;
+    background-color: #fff;
+    padding-bottom: 20rpx;
 }
 
 .headers .backgroundView {
@@ -58,9 +63,9 @@
 }
 
 .backgroundView .cardView {
-    width: 70%;
+    width: 80%;
     height: 300rpx;
-    margin-left: 15%;
+    margin-left: 10%;
     margin-top: 20rpx;
     background-color: #dbdbdb;
     border-radius: 20rpx;
@@ -68,13 +73,15 @@
 
 .funcBtns {
     width: 100%;
-    height: 220rpx;
+    min-height: 220rpx;
+    padding: 20rpx 0;
     /* border: 1rpx solid #dbdbdb; */
-    margin-top: 30rpx;
+    margin-top: 10rpx;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20rpx;
+    margin-bottom: 10rpx;
+    background-color: #fff;
 }
 
 .funcBtns .btns {
@@ -112,9 +119,10 @@
 }
 
 .tabsView {
-    width: 95%;
+    width: 100%;
     min-height: 200rpx;
-    margin-left: 2.5%;
+    background-color: #fff;
+    /* margin-left: 2.5%; */
     /* border: 1rpx solid #dbdbdb; */
     display: flex;
     flex-direction: row; /* 默认值，可以省略 */
@@ -148,4 +156,65 @@
     text-align: center;
     font-size: 28rpx;
     font-weight: 600;
+}
+
+.bottomfuncView {
+    width: 100%;
+    min-height: 250rpx;
+    background-color: #fff;
+    margin-top: 10rpx;
+    padding-bottom: 20rpx;
+}
+.bottomfuncView .bottomTitles {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.bottomfuncView .bottomTitles view {
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-left: 2.5%;
+    border-left: 8rpx solid rgb(252, 112, 25);
+    padding-left: 20rpx;
+}
+
+.bottomfuncView .gwViews {
+    width: 95%;
+    margin-left: 2.5%;
+    min-height: 180rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gwViews .c{
+    width: 48%;
+    height: 300rpx;
+    border: 1rpx solid #dbdbdb;
+    margin: auto;
+    
+}
+
+.gwViews .l{
+    border-radius: 20rpx;
+}
+
+.gwViews .r.c{
+    border: none;
+}
+
+.gwViews .r.c view {
+    width: 100%;
+    height: 140rpx;
+    /* margin: 0 auto; */
+    border: 1rpx solid #dbdbdb;
+    border-radius: 20rpx;
+}
+
+.gwViews .r.c view:nth-child(2) {
+    margin-top: 20rpx;
 }

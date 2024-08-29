@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/me/me"
   ],
   "subPackages": [
     {
@@ -8,7 +9,8 @@
       "name": "menzhen",
       "pages": [
         "ksList/ksList",
-        "addErhcCard/addErhcCard"
+        "addErhcCard/addErhcCard",
+        "paiban/paiban"
       ]
     }
   ],
@@ -16,6 +18,22 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "",
     "navigationBarBackgroundColor": "#4c87fd"
+  },
+  "tabBar": {
+      "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "/static/icon/footer_icon1_cur.png",
+            "selectedIconPath": "/static/icon/footer_icon1.png"
+        },
+        {
+            "pagePath": "pages/me/me",
+            "text": "个人中心",
+            "iconPath": "/static/icon/footer_icon2_cur.png",
+            "selectedIconPath": "/static/icon/footer_icon2.png"
+        }
+      ]
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",

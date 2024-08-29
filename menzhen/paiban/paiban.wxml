@@ -1,0 +1,9 @@
+
+<view class="selectDate">
+    <view class="{{ selectDate === item.time ? 'dateRows y' : 'dateRows' }}" wx:for="{{ dates }}">
+        <view class="rowsViews" bind:tap="changeTimes" data-item="{{ item }}">
+            <view>{{ item.date }}</view>
+            <view>{{ item.name }}</view>
+        </view>
+    </view>
+</view>
