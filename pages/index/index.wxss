@@ -70,11 +70,15 @@ page {
     background-color: #dbdbdb;
     border-radius: 20rpx;
 }
-
+.btnFather {
+    padding: 20rpx 0;
+    background-color: #fff;
+    margin: 10rpx 0;
+}
 .funcBtns {
     width: 100%;
-    min-height: 220rpx;
-    padding: 20rpx 0;
+    min-height: 180rpx;
+    /* padding: 20rpx 0; */
     /* border: 1rpx solid #dbdbdb; */
     margin-top: 10rpx;
     display: flex;
@@ -85,28 +89,54 @@ page {
 }
 
 .funcBtns .btns {
-    width: 40%;
-    height: 200rpx;
-    border: 1rpx solid #dbdbdb;
+    width: 48%;
+    height: 180rpx;
+    /* border: 1rpx solid #dbdbdb; */
     margin: auto;
-    padding-top: 20rpx;
-    border-radius: 30rpx;
+    /* padding-top: 20rpx; */
+    /* border-radius: 30rpx; */
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
-.funcBtns .btns .images {
-    width: 120rpx;
-    height: 120rpx;
-    border-radius: 60rpx;
-    border: 1rpx solid #dbdbdb;
-    margin: 0 auto;
-}
-.funcBtns .btns .title {
+.funcBtns .btns .bgImage {
     width: 100%;
-    height: 40rpx;
-    line-height: 40rpx;
-    text-align: center;
-    margin-top: 20rpx;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.funcBtns .btns .title {
+    /* width: 60%; */
+    /* height: 40rpx; */
+    /* line-height: 40rpx; */
+    text-align: left;
+    /* margin-top: 20rpx; */
     font-weight: 600;
+    z-index: 2;
+    /* position: relative; */
+    color: #fff;
+    margin-left: 30%;
+    margin-top: -2%;
+    /* top: 0;
+    left: 40%; */
+}
+
+.funcBtns .btns .title view:nth-child(1) {
+    font-size: 34rpx;
+    font-weight: 600;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.funcBtns .btns .title view:nth-child(2) {
+    font-size: 26rpx;
+    font-weight: 0;
+    color: #ffffff;
 }
 
 .banners {
@@ -131,7 +161,7 @@ page {
 .tabsView .funcBtnRows {
     width: 24%;
     /* margin: 2%; */
-    height: 140rpx;
+    min-height: 140rpx;
     /* border: 1rpx solid #dbdbdb; */
     padding-top: 10rpx;
 }
@@ -141,7 +171,7 @@ page {
     height: 80rpx;
     margin: 0 auto;
     border-radius: 50%;
-    border: 1rpx solid #dbdbdb;
+    /* border: 1rpx solid #dbdbdb; */
 }
 
 .tabsView .funcBtnRows .icon image {
@@ -151,11 +181,11 @@ page {
 
 .tabsView .funcBtnRows .titles {
     width: 100%;
-    height: 40rpx;
+    min-height: 40rpx;
     line-height: 40rpx;
     text-align: center;
     font-size: 28rpx;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .bottomfuncView {
@@ -194,27 +224,95 @@ page {
 .gwViews .c{
     width: 48%;
     height: 300rpx;
-    border: 1rpx solid #dbdbdb;
+    /* border: 1rpx solid #dbdbdb; */
     margin: auto;
     
 }
 
 .gwViews .l{
     border-radius: 20rpx;
+    position: relative;
+}
+
+.gwViews .l image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.gwViews .l .title {
+    height: 100rpx;
+    /* margin-left: 2.5%; */
+    z-index: 2;
+    position: absolute;
+    line-height: 100rpx;
+    color: #0AACC7;
+    left: 5%;
+    font-size: 34rpx;
+}
+
+.gwViews .l .smallTitle {
+    height: 60rpx;
+    z-index: 2;
+    position: absolute;
+    line-height: 60rpx;
+    color: #0AACC7;
+    left: 5%;
+    top: 60rpx;
+    font-size: 26rpx;
+    color: #99999999;
 }
 
 .gwViews .r.c{
     border: none;
 }
 
-.gwViews .r.c view {
+.gwViews .r.c .c-1 {
     width: 100%;
     height: 140rpx;
     /* margin: 0 auto; */
-    border: 1rpx solid #dbdbdb;
+    /* border: 1rpx solid #dbdbdb; */
     border-radius: 20rpx;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
-.gwViews .r.c view:nth-child(2) {
+.gwViews .r.c .c-1 image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.gwViews .r.c .c-1:nth-child(2) {
     margin-top: 20rpx;
+}
+
+.gwViews .r.c .c-1 .smallTitles {
+    position: relative;
+    z-index: 2;
+    left: 20rpx;
+}
+
+.gwViews .r.c .c-1 .smallTitles view:nth-child(1) {
+    font-size: 34rpx;
+}
+
+.gwViews .r.c .c-1 .smallTitles view:nth-child(2) {
+    font-size: 26rpx;
+    color: #99999999;
+}
+
+.gwViews .r.c .c-1 .smallTitles .other1 {
+    color: #ECB611;
+}
+
+.gwViews .r.c .c-1 .smallTitles .other2{
+    color: #049D04;
 }

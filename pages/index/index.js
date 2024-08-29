@@ -3,101 +3,100 @@
 Page({
   data: {
     mzList: [
+        // {
+        //     title: '绑卡',
+        //     icon: '',
+        //     url: '/menzhen/addErhcCard/addErhcCard',
+        //     id: 0
+        // },
+        // {
+        //     title: '预约挂号',
+        //     icon: '',
+        //     url: '/menzhen/ksList/ksList',
+        //     id: 3
+        // },
         {
-            title: '绑卡',
-            icon: '',
-            url: '/menzhen/addErhcCard/addErhcCard',
-            id: 0
-        },
-        {
-            title: '门诊缴费',
-            icon: '',
-            url: '',
-            id: 1
-        },
-        {
-            title: '门诊日清单',
-            icon: '',
-            url: '',
-            id: 2
-        },
-        {
-            title: '预约挂号',
-            icon: '',
-            url: '/menzhen/ksList/ksList',
-            id: 3
-        },
-        {
-            title: '预约退号',
-            icon: '',
-            url: '',
-            id: 4
-        },
-        {
-            title: '检验报告',
-            icon: '',
-            url: '',
-            id: 5
-        },
-        {
-            title: '检查报告',
-            icon: '',
-            url: '',
-            id: 6
-        },
-        {
-            title: '自助开单',
-            icon: '',
-            url: '',
-            id: 7
-        },
-    ],
-    zyList: [
-        {
-            title: '住院预存',
-            icon: '',
-            url: '',
-            id: 10
-        },
-        {
-            title: '住院预存记录',
-            icon: '',
+            title: '一卡通充值',
+            icon: '../../static/home/11.png',
             url: '',
             id: 11
         },
         {
-            title: '住院清单',
-            icon: '',
+            title: '药品查询',
+            icon: '../../static/home/12.png',
             url: '',
             id: 12
         },
-    ],
-    tjList: [
         {
-            title: '体检预约',
-            icon: '',
+            title: '材料查询',
+            icon: '../../static/home/13.png',
             url: '',
             id: 13
         },
         {
-            title: '体检报告',
-            icon: '',
+            title: '缴费记录',
+            icon: '../../static/home/14.png',
             url: '',
             id: 14
-        }
-    ],
-    ksjsList: [
+        },
         {
-            title: '科室介绍',
-            icon: '',
+            title: '电子发票开具',
+            icon: '../../static/home/15.png',
             url: '',
             id: 15
         },
         {
-            title: '医生介绍',
-            icon: '',
+            title: '电子发票查询',
+            icon: '../../static/home/16.png',
             url: '',
             id: 16
+        },
+        
+    ],
+    zyList: [
+        {
+            title: '住院费用\n预缴',
+            icon: '../../static/home/21.png',
+            url: '',
+            id: 21
+        },
+        {
+            title: '住院一日\n清单查询',
+            icon: '../../static/home/22.png',
+            url: '',
+            id: 22
+        },
+        {
+            title: '住院账单\n查询',
+            icon: '../../static/home/23.png',
+            url: '',
+            id: 23
+        },
+        {
+            title: '住院缴费\n记录查询',
+            icon: '../../static/home/24.png',
+            url: '',
+            id: 24
+        },
+        {
+            title: '住院结算\n电子发票',
+            icon: '../../static/home/25.png',
+            url: '',
+            id: 25
+        }
+    ],
+    pdhzList: [
+        {
+            title: '门诊候诊',
+            icon: '../../static/home/31.png',
+            url: '',
+            id: 31
+        },
+        {
+            title: '检查排队\n取药排队',
+            icon: '../../static/home/32.png',
+            url: '',
+            id: 31
         },
     ]
   },
