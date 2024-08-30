@@ -8,7 +8,162 @@ Page({
      * 页面的初始数据
      */
     data: {
-        list: []
+        list: [],
+        typeList: [
+            {
+                name: '内科',
+                children: [
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    
+                    
+                ]
+            },
+            {
+                name: '外科',
+                children: [
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    
+                    
+                ]
+            },
+            {
+                name: '妇科',
+                children: [
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '骨科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    ,
+                    {
+                        name: '内分泌科'
+                    },
+                    {
+                        name: '内分泌科'
+                    }
+                    
+                    
+                ]
+            }
+        ],
+        selectName: '内科',
+        selectKzList: []
     },
 
     /**
@@ -25,6 +180,9 @@ Page({
         wx.setNavigationBarTitle({
             title: title
         })
+        this.setData({
+            selectKzList: this.data.typeList[0].children
+        })
         this.getList()
     },
     getList() {
@@ -39,6 +197,13 @@ Page({
         const subjects = e.currentTarget.dataset.subjects
         wx.navigateTo({
             url: '/menzhen/paiban/paiban?deptCode=' + subjects.code + '&name=' + subjects.name,
+        })
+    },
+    changeTypes (e) {
+        const item = e.currentTarget.dataset.item
+        this.setData({
+            selectName: item.name,
+            selectKzList: item.children
         })
     },
 

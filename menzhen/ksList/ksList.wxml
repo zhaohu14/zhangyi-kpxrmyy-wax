@@ -1,7 +1,32 @@
-<van-index-bar sticky>
+<!-- <van-index-bar sticky>
     <view wx:for="{{ list }}">
         <van-index-anchor index="{{ item.index }}" />
         <van-cell wx:for="{{ item.subjects }}" wx:for-item="subjects" title="{{ subjects.name }}" bind:tap="toPaiBan" data-subjects="{{ subjects }}"/>
     </view>
 
-</van-index-bar>
+</van-index-bar> -->
+
+
+<view class="search">
+    <view class="headerSearch">
+        <view class="images">
+            <image src="../../static/search1.png" mode="" />
+        </view>
+        <input type="text" placeholder-class="c-placeholder" placeholder="请输入您要搜索的医生" />
+        <view class="searchBtn">搜索</view>
+    </view>
+</view>
+<view class="kzContent">
+    <view class="kzLeft">
+        <view class="{{ selectName === item.name ? 'leftContent y' : 'leftContent' }}" wx:for="{{ typeList }}" bind:tap="changeTypes" data-item="{{ item }}">
+            <view>{{ item.name }}</view>
+        </view>
+    </view>
+    <view class="kzRight">
+        <view class="rightContent" wx:for="{{ selectKzList }}">
+            {{ item.name }}
+        </view>
+        <view class="rightContent" style="border: none;">
+        </view>
+    </view>
+</view>
