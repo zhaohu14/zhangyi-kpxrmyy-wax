@@ -1,4 +1,5 @@
 // pages/me/me.js
+import drawQrcode from '../../utils/qrcode'
 Page({
 
   /**
@@ -12,7 +13,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+      this.creatEWM('123456')
+  },
+  creatEWM (value) {
+    drawQrcode({
+        width: 90,
+        height: 90,
+        canvasId: 'myQrcode',
+        // ctx: wx.createCanvasContext('myQrcode'),
+        text: value,
+        // v1.0.0+版本支持在二维码上绘制图片
+        image: {
+          imageResource: '',
+          dx: 62.5,
+          dy: 62.5,
+          dWidth: 25,
+          dHeight: 25
+        }
+      })
+  },
+  switchCard () {
+      console.log('触发成功')
   },
 
   /**

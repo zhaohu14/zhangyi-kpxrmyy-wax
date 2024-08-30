@@ -98,10 +98,15 @@ Page({
             url: '',
             id: 31
         },
-    ]
+    ],
+    cardInfo: null
   },
-  onLoad () {},
+  onLoad () {
+  },
   onShow () {
+      this.setData({
+        cardInfo: getApp().globalData.cardInfo
+      })
   },
   toPage (e) {
       const dataset = e.currentTarget.dataset

@@ -1,1 +1,147 @@
 /* pages/me/me.wxss */
+page {
+    background-color: rgb(216, 228, 248);
+}
+.cardView {
+    width: 95%;
+    margin-left: 2.5%;
+    height: 300rpx;
+    margin-top: 40rpx;
+    padding-top: 40rpx;
+    position: relative;
+}
+.cardView .bgImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cardView .cardViewContent {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 0;
+    padding-top: 40rpx;
+}
+
+.switchCard {
+    width: 140rpx;
+    color: #fff;
+    position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+    font-size: 28rpx;
+    z-index: 10;
+}
+
+.ewm {
+    position: absolute;
+    top: 80rpx;
+    right: 30rpx;
+    /* border: 1rpx solid #fff; */
+}
+
+.ewm .ewmContent {
+    width: 180rpx;
+    height: 180rpx;
+    margin: auto;
+    /* border: 1rpx solid #dbdbdb; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ewm .ewmContent .myQrcode {
+    /* width: 100%;
+    height: 100%; */
+    /* transform-origin: center; */
+  /* transform: scale(0.6); */
+  margin-top: 110rpx;
+}
+
+.ewm .title {
+    width: 100%;
+    font-size: 28rpx;
+    color: #fff;
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+.erchCardView {
+    height: 340rpx;
+}
+
+.cardView .hasCard {
+    margin-left: 60rpx;
+    color: #fff;
+}
+
+.cardView .hasCard .cardName {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 34rpx;
+    font-weight: 600;
+}
+
+.cardView .hasCard .cardNo {
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 30rpx;
+    color: #D9E8FF;
+}
+
+.meRows {
+    width: 95%;
+    height: 100rpx;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5%;
+    background-color: #fff;
+    /* margin-top: 20rpx; */
+    border-radius: 20rpx;
+}
+
+.meRows .images {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.meRows.top {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 20rpx;
+    /* border-bottom: 1rpx solid #dbdbdb; */
+    margin-bottom: 1rpx;
+}
+
+.meRows.bottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 20rpx;
+}
+
+.meRows .images image {
+    width: 100%;
+    height: 100%;
+}
+
+.meRows .title {
+    width: calc(100% - 80rpx - 20rpx - 20rpx - 20rpx - 20rpx);
+    margin-left: 20rpx;
+}
+
+.meRows .r {
+    width: 20rpx;
+    height: 30rpx;
+}
+
+.meRows .r image{
+    width: 100%;
+    height: 100%;
+}
