@@ -19,7 +19,7 @@
     <view class="title">缴费记录</view>
     <image class="r" src="../../static/me/right.png" mode="" />
 </view>
-<view class="meRows">
+<view class="meRows" bind:tap="toCardList">
     <image class="images" src="../../static/me/jzkgl.png" mode="" />
     <view class="title">就诊卡管理</view>
     <image class="r" src="../../static/me/right.png" mode="" />
