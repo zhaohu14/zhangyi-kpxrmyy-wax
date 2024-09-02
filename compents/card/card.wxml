@@ -1,4 +1,4 @@
-<!-- <view>
+<view wx:if="{{ !isDZJKK }}">
     <view class="jzCardView cardView">
         <view class="cardViewContent">
             <view class="hasCard">
@@ -7,13 +7,13 @@
             </view>
             <slot></slot>
         </view>
-        <view class="switchCard" bind:tap="switchCard">切换就诊人</view>
+        <view wx:if="{{ showSwitch }}" class="switchCard" bind:tap="switchCard">切换就诊人</view>
 
         <image class="bgImage" src="../../static/me/card.png" mode="" />
     </view>
-</view> -->
+</view>
 
-<view class="dzjkk">
+<view class="dzjkk" wx:if="{{ isDZJKK }}">
     <view class="jzCardView cardView">
         <view class="cardViewContent">
             <view class="hasCard">
@@ -22,7 +22,7 @@
             </view>
             <slot></slot>
         </view>
-        <view class="switchCard" bind:tap="switchCard">切换就诊人</view>
+        <view wx:if="{{ showSwitch }}" class="switchCard" bind:tap="switchCard">切换就诊人</view>
 
         <image class="bgImage" src="../../static/health_card_template.png" mode="" />
     </view>

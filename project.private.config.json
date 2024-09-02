@@ -10,6 +10,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "menzhen/cardList/cardList",
+          "pathName": "menzhen/cardList/cardList",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "menzhen/cardDetail/cardDetail",
           "pathName": "menzhen/cardDetail/cardDetail",
           "query": "",

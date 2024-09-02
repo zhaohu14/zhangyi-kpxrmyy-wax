@@ -11,7 +11,8 @@
         "ksList/ksList",
         "addErhcCard/addErhcCard",
         "paiban/paiban",
-        "cardDetail/cardDetail"
+        "cardDetail/cardDetail",
+        "cardList/cardList"
       ]
     }
   ],

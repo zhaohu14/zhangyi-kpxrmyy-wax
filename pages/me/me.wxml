@@ -1,21 +1,5 @@
-<!-- <view class="jzCardView cardView">
-    <view class="cardViewContent">
-        <view class="hasCard">
-            <view class="cardName">赵虎</view>
-            <view class="cardNo">就诊卡：654225********2514</view>
-        </view>
-        <view class="ewm">
-            <view class="ewmContent" bind:tap="toCardDetail">
-                <canvas class='myQrcode' canvas-id='myQrcode'></canvas>
-            </view>
-            <view class="title">就诊卡二维码</view>
-        </view>
-    </view>
-    <view class="switchCard" bind:tap="switchCard">切换就诊人</view>
-    
-    <image class="bgImage" src="../../static/me/card.png" mode=""/>
-</view> -->
-<card cardInfo="{{ cardInfo }}">
+
+<card cardInfo="{{ cardInfo }}" showSwitch="{{ true }}" isDZJKK="{{ true }}">
     <view class="ewm">
         <view class="ewmContent" bind:tap="toCardDetail">
             <canvas class='myQrcode' canvas-id='myQrcode'></canvas>

@@ -8,6 +8,14 @@ Component({
     properties: {
         cardInfo: {
             type: Object,
+        },
+        showSwitch: {
+            type: Boolean,
+            value: false
+        },
+        isDZJKK: {
+            type: Boolean,
+            value: false
         }
     },
 

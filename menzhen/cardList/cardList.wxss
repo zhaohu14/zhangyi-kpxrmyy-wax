@@ -1,0 +1,56 @@
+/* menzhen/cardList/cardList.wxss */
+
+.ewm {
+    position: absolute;
+    top: 80rpx;
+    right: 30rpx;
+    /* border: 1rpx solid #fff; */
+}
+
+.ewm .ewmContent {
+    width: 184rpx;
+    height: 184rpx;
+    padding: 2rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+    margin: auto;
+    /* border: 1rpx solid #dbdbdb; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ewm .ewmContent .myQrcode {
+    /* width: 100%;
+    height: 100%; */
+    /* transform-origin: center; */
+  /* transform: scale(0.6); */
+  margin-top: 110rpx;
+}
+
+.ewm .title {
+    width: 100%;
+    font-size: 28rpx;
+    color: #fff;
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+.dzjkk .ewm .title {
+    color: #7e7e7e;
+}
+
+.btns {
+    width: 70%;
+    margin-left: 15%;
+    background: #0586F1;
+    border-radius: 10rpx;
+    font-size: 34rpx;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 30rpx;
+}
