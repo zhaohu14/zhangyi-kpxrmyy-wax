@@ -1,4 +1,4 @@
-// pages/me/me.js
+// menzhen/cardDetail/cardDetail.js
 import drawQrcode from '../../utils/qrcode'
 Page({
 
@@ -6,25 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-      cardInfo: {
-          name: '赵虎',
-          jzCardNo: '001',
-          idCardNo: '654225********2514',
-      }
+      showEwm: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-      this.creatEWM('123456')
+      this.creatEWM('654225199806182514')
   },
   creatEWM (value) {
+    this.setData({
+        showEwm: false
+    })
     drawQrcode({
-        width: 90,
-        height: 90,
+        width: 204,
+        height: 204,
         canvasId: 'myQrcode',
-        // ctx: wx.createCanvasContext('myQrcode'),
         text: value,
         // v1.0.0+版本支持在二维码上绘制图片
         image: {
@@ -34,12 +32,14 @@ Page({
           dWidth: 25,
           dHeight: 25
         }
-      })
+    })
+    this.setData({
+        showEwm: true
+    })
   },
-  toCardDetail () {
-      wx.navigateTo({
-        url: '/menzhen/cardDetail/cardDetail',
-      })
+  changeEwm () {
+      console.log(1)
+      this.creatEWM('123456')
   },
 
   /**

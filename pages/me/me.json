@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+      "card": "/compents/card/card"
+  },
   "navigationBarTitleText": "个人中心"
 }

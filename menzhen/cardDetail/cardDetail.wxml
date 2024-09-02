@@ -1,0 +1,17 @@
+<view class="titles">就诊时请出示此二维码</view>
+
+<view class="ewmContent">
+    <van-cell title="姓名" value="赵虎" border="{{ false}}" />
+    <van-cell title="就诊卡号" value="654225199806182514" border="{{ false}}" />
+    <van-cell title="手机号" value="17794843237" border="{{ false}}" />
+    <view class="ewmView" bind:tap="changeEwm">
+        <canvas class='myQrcode' canvas-id='myQrcode'></canvas>
+    </view>
+    <view class="smTitles">使用说明</view>
+    <view class="smContent" wx:if="{{ showEwm }}">
+        <text>静态二维码适用于挂号、问诊等非核心应用景；动态二维码在每次使用前生成，适用于病历查询、结算交易等核心应用场景。
+        </text>
+    </view>
+</view>
+
+<view class="btns">切换健康卡/就诊卡</view>

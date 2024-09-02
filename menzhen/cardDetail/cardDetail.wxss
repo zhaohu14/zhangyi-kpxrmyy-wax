@@ -1,0 +1,65 @@
+page {
+    background-color: rgb(247, 247, 247);
+}
+
+.titles {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    color: #4785FD;
+    font-size: 34rpx;
+    font-weight: 600;
+}
+
+.ewmContent {
+    width: 90%;
+    margin-left: 5%;
+    min-height: 340rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    padding-top: 10rpx;
+    padding-bottom: 30rpx;
+}
+
+.ewmContent .ewmView {
+    width: 400rpx;
+    height: 400rpx;
+    margin: 20rpx auto;
+    /* border: 1rpx solid #dbdbdb; */
+}
+
+.myQrcode {
+    height: 400rpx !important;
+    width: 400rpx !important;
+}
+.ewmContent .smTitles {
+    width: 100%;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    color: #666666;
+    font-size: 30rpx;
+}
+
+.ewmContent .smContent {
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    font-size: 28rpx;
+    color: #666666;
+}
+
+.btns {
+    width: 70%;
+    margin-left: 15%;
+    background: #0586F1;
+    border-radius: 10rpx;
+    font-size: 34rpx;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 30rpx;
+}

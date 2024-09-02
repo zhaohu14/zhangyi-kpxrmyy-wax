@@ -5,5 +5,18 @@
     "compileHotReLoad": false,
     "urlCheck": false
   },
-  "libVersion": "3.5.4"
+  "libVersion": "3.5.4",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "menzhen/cardDetail/cardDetail",
+          "pathName": "menzhen/cardDetail/cardDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

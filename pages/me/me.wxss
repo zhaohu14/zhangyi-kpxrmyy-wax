@@ -2,40 +2,6 @@
 page {
     background-color: rgb(216, 228, 248);
 }
-.cardView {
-    width: 95%;
-    margin-left: 2.5%;
-    height: 300rpx;
-    margin-top: 40rpx;
-    padding-top: 40rpx;
-    position: relative;
-}
-.cardView .bgImage {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.cardView .cardViewContent {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    z-index: 10;
-    top: 0;
-    padding-top: 40rpx;
-}
-
-.switchCard {
-    width: 140rpx;
-    color: #fff;
-    position: absolute;
-    right: 10rpx;
-    top: 10rpx;
-    font-size: 28rpx;
-    z-index: 10;
-}
 
 .ewm {
     position: absolute;
@@ -45,8 +11,11 @@ page {
 }
 
 .ewm .ewmContent {
-    width: 180rpx;
-    height: 180rpx;
+    width: 184rpx;
+    height: 184rpx;
+    padding: 2rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
     margin: auto;
     /* border: 1rpx solid #dbdbdb; */
     display: flex;
@@ -71,27 +40,8 @@ page {
     margin-top: 20rpx;
 }
 
-.erchCardView {
-    height: 340rpx;
-}
-
-.cardView .hasCard {
-    margin-left: 60rpx;
-    color: #fff;
-}
-
-.cardView .hasCard .cardName {
-    height: 80rpx;
-    line-height: 80rpx;
-    font-size: 34rpx;
-    font-weight: 600;
-}
-
-.cardView .hasCard .cardNo {
-    height: 30rpx;
-    line-height: 30rpx;
-    font-size: 30rpx;
-    color: #D9E8FF;
+.dzjkk .ewm .title {
+    color: #7e7e7e;
 }
 
 .meRows {

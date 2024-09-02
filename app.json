@@ -10,7 +10,8 @@
       "pages": [
         "ksList/ksList",
         "addErhcCard/addErhcCard",
-        "paiban/paiban"
+        "paiban/paiban",
+        "cardDetail/cardDetail"
       ]
     }
   ],
@@ -20,20 +21,21 @@
     "navigationBarBackgroundColor": "#4c87fd"
   },
   "tabBar": {
-      "list": [
-        {
-            "pagePath": "pages/index/index",
-            "text": "首页",
-            "iconPath": "/static/icon/footer_icon1_cur.png",
-            "selectedIconPath": "/static/icon/footer_icon1.png"
-        },
-        {
-            "pagePath": "pages/me/me",
-            "text": "个人中心",
-            "iconPath": "/static/icon/footer_icon2_cur.png",
-            "selectedIconPath": "/static/icon/footer_icon2.png"
-        }
-      ]
+    "selectedColor": "#4785FD",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/icon/footer_icon1_cur.png",
+        "selectedIconPath": "/static/icon/footer_icon1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "/static/icon/footer_icon2_cur.png",
+        "selectedIconPath": "/static/icon/footer_icon2.png"
+      }
+    ]
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",

@@ -1,0 +1,29 @@
+<!-- <view>
+    <view class="jzCardView cardView">
+        <view class="cardViewContent">
+            <view class="hasCard">
+                <view class="cardName">{{ cardInfo.name }}</view>
+                <view class="cardNo">就诊卡：{{ cardInfo.idCardNo }}</view>
+            </view>
+            <slot></slot>
+        </view>
+        <view class="switchCard" bind:tap="switchCard">切换就诊人</view>
+
+        <image class="bgImage" src="../../static/me/card.png" mode="" />
+    </view>
+</view> -->
+
+<view class="dzjkk">
+    <view class="jzCardView cardView">
+        <view class="cardViewContent">
+            <view class="hasCard">
+                <view class="cardName">{{ cardInfo.name }}</view>
+                <view class="cardNo">就诊卡：{{ cardInfo.idCardNo }}</view>
+            </view>
+            <slot></slot>
+        </view>
+        <view class="switchCard" bind:tap="switchCard">切换就诊人</view>
+
+        <image class="bgImage" src="../../static/health_card_template.png" mode="" />
+    </view>
+</view>

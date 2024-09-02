@@ -1,0 +1,120 @@
+.cardView {
+    width: 95%;
+    margin-left: 2.5%;
+    height: 340rpx;
+    margin-top: 40rpx;
+    padding-top: 40rpx;
+    position: relative;
+}
+.cardView .bgImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cardView .cardViewContent {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 0;
+    padding-top: 40rpx;
+}
+
+.switchCard {
+    width: 140rpx;
+    color: #fff;
+    position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+    font-size: 28rpx;
+    z-index: 10;
+}
+
+.dzjkk .switchCard {
+    color: #000;
+    background-color: #7e7e7e99;
+    left: 0;
+    /* bottom: 0; */
+    height: 60rpx;
+    line-height: 60rpx;
+    top: 80rpx;
+    width: 160rpx;
+    text-align: center;
+    border-top-right-radius: 30rpx;
+    border-bottom-right-radius: 30rpx;
+    color: #fff;
+}
+
+.ewm {
+    position: absolute;
+    top: 80rpx;
+    right: 30rpx;
+    /* border: 1rpx solid #fff; */
+}
+
+.ewm .ewmContent {
+    width: 184rpx;
+    height: 184rpx;
+    padding: 2rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+    margin: auto;
+    /* border: 1rpx solid #dbdbdb; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ewm .ewmContent .myQrcode {
+    /* width: 100%;
+    height: 100%; */
+    /* transform-origin: center; */
+  /* transform: scale(0.6); */
+  margin-top: 110rpx;
+}
+
+.ewm .title {
+    width: 100%;
+    font-size: 28rpx;
+    color: #fff;
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+
+
+.cardView .hasCard {
+    margin-left: 60rpx;
+    color: #fff;
+}
+
+.dzjkk .cardView .hasCard {
+    margin-top: 150rpx;
+    color: #000;
+    margin-left: 30rpx;
+}
+
+.cardView .hasCard .cardName {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 34rpx;
+    font-weight: 600;
+}
+
+.cardView .hasCard .cardNo {
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 30rpx;
+    color: #D9E8FF;
+}
+
+.dzjkk .cardView .hasCard .cardNo {
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 30rpx;
+    color: #000;
+}
