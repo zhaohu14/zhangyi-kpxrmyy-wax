@@ -1,3 +1,130 @@
+page {
+    background-color: rgb(247, 247, 248);
+}
+.cardInfo {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+}
+
+.cardInfo .name {
+    width: 60%;
+    margin-left: 20rpx;
+    width: calc(100% - 40rpx - 180rpx - 40rpx);
+}
+
+.cardInfo .qh {
+    min-width: 40rpx;
+    min-height: 30rpx;
+    line-height: 30rpx;
+    background-color: #4C87FD;
+    border-radius: 20rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 28rpx;
+    margin-right: 20rpx;
+    padding: 10rpx 20rpx;
+}
+
+.cardInfo image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.doctorCard {
+    width: 100%;
+    min-height: 200rpx;
+    background-color: #fff;
+    margin-top: 20rpx;
+    padding: 20rpx 0;
+}
+
+.doctorCard .doctorContent {
+    width: 94%;
+    margin-left: 3%;
+    min-height: 200rpx;
+    /* border: 1rpx solid #dbdbdb; */
+}
+
+.doctorCard .doctorContent .top {
+    width: 100%;
+    height: 180rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctorCard .doctorContent .top image {
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.doctorCard .doctorContent .top .doctorInfoView {
+    width: 50%;
+    /* height: 180rpx; */
+}
+.doctorCard .doctorContent .top .doctorInfoView .names {
+    display: flex;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.doctorCard .doctorContent .top .doctorInfoView .names view:nth-child(1) {
+    font-size: 34rpx;
+    color: #000;
+}
+
+.doctorCard .doctorContent .top .doctorInfoView .names view:nth-child(2) {
+    font-size: 28rpx;
+    color: #7e7e7e;
+    margin-left: 20rpx;
+}
+.doctorCard .doctorContent .top .doctorInfoView .title {
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 30rpx;
+}
+
+.doctorCard .doctorContent .top .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctorCard .doctorContent .top .btns view {
+    padding: 10rpx 30rpx;
+    background-color: #4C87FC;
+    color: #fff;
+    border-radius: 10rpx;
+}
+
+.doctorCard .doctorContent .top .btns.no view {
+    background-color: #999999;
+}
+
+.doctorCard .doctorContent .top .btns image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+}
+
+.doctorCard .doctorContent .bottom {
+    width: 100%;
+    font-size: 30rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* 定义文本的行数 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+/* ================================ */
+
 .selectDate {
     width: 100%;
     /* height: 80rpx; */

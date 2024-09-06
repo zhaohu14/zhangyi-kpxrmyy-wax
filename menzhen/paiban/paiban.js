@@ -14,7 +14,29 @@ Page({
         dates: [],
         deptCode: null,
         deptName: null,
-        selectDate: ''
+        selectDate: '',
+        doctorList: [
+            {
+                name: '赵虎',
+                remake: `简介：医生，一般称临床医生。能够用科学或技术的手段来处理人
+                类疾病，预防出生缺陷提高人口素质，治病救人改善病患人类生活
+                质量，并以学习研究医学应用于临床为生的职业。通过定期临床理
+                论考试，技能考核培训，能够熟练掌握必要的临床医学技能和`,
+                sex: '女',
+                title: '主治医生',
+                hasH: true
+            },
+            {
+                name: '刘医生',
+                remake: `简介：医生，一般称临床医生。能够用科学或技术的手段来处理人
+                类疾病，预防出生缺陷提高人口素质，治病救人改善病患人类生活
+                质量，并以学习研究医学应用于临床为生的职业。通过定期临床理
+                论考试，技能考核培训，能够熟练掌握必要的临床医学技能和`,
+                sex: '女',
+                title: '主治医生',
+                hasH: false
+            }
+        ]
     },
 
     /**
@@ -47,6 +69,13 @@ Page({
         const item = e.currentTarget.dataset.item
         this.setData({
             selectDate: item.time
+        })
+    },
+    toDoctorDetail (e) {
+        const item = e.currentTarget.dataset.item
+        wx.setStorageSync('yuyueInfo', item)
+        wx.navigateTo({
+          url: '/menzhen/yuyue/yuyue',
         })
     },
 

@@ -1,9 +1,37 @@
+<view class="cardInfo">
+    <view class="name">当前就诊人：赵虎</view>
+    <view class="qh">点击切换</view>
+    <image src="../../static/icon/right.png" mode="" />
+</view>
 
-<view class="selectDate">
+
+<!-- <view class="selectDate">
     <view class="{{ selectDate === item.time ? 'dateRows y' : 'dateRows' }}" wx:for="{{ dates }}">
         <view class="rowsViews" bind:tap="changeTimes" data-item="{{ item }}">
             <view>{{ item.date }}</view>
             <view>{{ item.name }}</view>
+        </view>
+    </view>
+</view> -->
+
+<view class="doctorCard" wx:for="{{ doctorList }}">
+    <view class="doctorContent">
+        <view class="top">
+            <image src="../../static/icon/doctor.png" mode="" />
+            <view class="doctorInfoView">
+                <view class="names">
+                    <view class="name">{{ item.name }}</view>
+                    <view class="sex">性别：{{ item.sex }}</view>
+                </view>
+                <view class="title">{{ item.title }}</view>
+            </view>
+            <view class="{{ item.hasH ? 'btns' : 'btns no' }}" bind:tap="toDoctorDetail" data-item="{{ item }}">
+                <view>有号</view>
+                <image src="../../static/icon/right.png" mode="" />
+            </view>
+        </view>
+        <view class="bottom">
+            {{ item.remake }}
         </view>
     </view>
 </view>

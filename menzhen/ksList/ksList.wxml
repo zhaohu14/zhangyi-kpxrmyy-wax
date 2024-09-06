@@ -23,7 +23,7 @@
         </view>
     </view>
     <view class="kzRight">
-        <view class="rightContent" wx:for="{{ selectKzList }}">
+        <view class="rightContent" wx:for="{{ selectKzList }}" bind:tap="toPaiBan" data-subjects="{{ item }}">
             {{ item.name }}
         </view>
         <view class="rightContent" style="border: none;">

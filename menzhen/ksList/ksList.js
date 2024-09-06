@@ -196,7 +196,7 @@ Page({
         //   console.log(e)
         const subjects = e.currentTarget.dataset.subjects
         wx.navigateTo({
-            url: '/menzhen/paiban/paiban?deptCode=' + subjects.code + '&name=' + subjects.name,
+            url: '/menzhen/paiban/paiban?name=' + subjects.name
         })
     },
     changeTypes (e) {

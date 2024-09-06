@@ -12,7 +12,8 @@
         "addErhcCard/addErhcCard",
         "paiban/paiban",
         "cardDetail/cardDetail",
-        "cardList/cardList"
+        "cardList/cardList",
+        "yuyue/yuyue"
       ]
     }
   ],
