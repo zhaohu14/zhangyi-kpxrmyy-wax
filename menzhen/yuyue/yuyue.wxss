@@ -1,1 +1,212 @@
-/* menzhen/yuyue/yuyue.wxss */
+page {
+    background-color: rgb(247, 247, 247);
+}
+
+.doctorInfo {
+    width: 95%;
+    min-height: 300rpx;
+    /* border: 1rpx solid #dbdbdb; */
+    margin-left: 2.5%;
+    padding-top: 20rpx;
+}
+.doctorInfo .images {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.doctorInfo .images image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 75rpx;
+    margin-left: calc(50% - 75rpx);
+    
+}
+
+.doctorInfo .remake {
+    color: #666666;
+    font-size: 30rpx;
+    margin-top: 30rpx;
+}
+
+.selectDate {
+    width: 100%;
+    /* height: 80rpx; */
+    overflow-x: scroll;
+    display: flex;
+    border-bottom: 1rpx solid #dbdbdb;
+    margin-top: 30rpx;
+}
+.dateRows {
+    min-width: 180rpx;
+    /* padding: 0 20rpx; */
+    height: 120rpx;
+    /* border: 1rpx solid #dbdbdb; */
+    text-align: center;
+    line-height: 40rpx;
+    background: #fff;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.dateRows .rowsViews {
+    width: 100%;
+}
+
+.dateRows.y {
+    background-color: #4c87fd;
+    color: #fff;
+}
+
+.paibanRows {
+    width: 100%;
+    min-height: 100rpx;
+    background-color: #fff;
+    margin-bottom: 1rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rpx;
+}
+
+.paibanRows .content {
+    width: calc(100% - 80rpx);
+}
+
+.paibanRows .content .paibanDate {
+    height: 50rpx;
+    line-height: 60rpx;
+    font-size: 34rpx;
+    font-weight: 600;
+}
+
+.paibanRows .content .paibanBtom {
+    height: 40rpx;
+    line-height: 40rpx;
+    display: flex;
+}
+
+.paibanRows .content .paibanBtom view {
+    font-size: 30rpx;
+    height: 40rpx;
+}
+
+.paibanRows .content .paibanBtom view:nth-child(2) {
+    min-width: 20rpx;
+    height: 40rpx;
+    padding: 0 20rpx;
+    background-color: #4C87FD;
+    border-radius: 4rpx;
+    color: #fff;
+    margin-left: 30rpx;
+}
+
+.paibanRows image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.yyDetail {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.yyDetail .yyDetailContent {
+    width: 90%;
+    min-height: 50vh;
+    background-color: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;
+    margin: 180rpx auto;
+    padding-bottom: 20rpx;
+}
+
+.yyDetail .yyDetailContent .titles {
+    width: 100%;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    color: #fff;
+    background-color: #4C87FD;
+    font-size: 34rpx;
+}
+
+.yyDetail .yyDetailContent .userInfo {
+    width: 95%;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30rpx;
+    margin-left: 2.5%;
+    border-bottom: 1rpx solid #dbdbdb;
+}
+.userInfo image {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 auto;
+}
+.userInfo view {
+    margin: 0 auto;
+}
+.userInfo view:nth-child(1) {
+    color: #4C87FD;
+}
+
+.yyDetail .yyDetailContent .yyInfo {
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.yyInfo .yyRows {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+}
+
+.yyInfo .yyRows view:nth-child(1) {
+    color: #999999;
+    width: 140rpx;
+    text-align: right;
+}
+
+.yyInfo .yyRows view:nth-child(2) {
+    color: #000;
+    width: calc(100% - 180rpx);
+    text-align: right;
+    margin-left: 40rpx;
+    text-align: left;
+}
+
+.yyDetail .yyDetailContent .btns {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 20rpx;
+}
+
+.yyDetail .yyDetailContent .btns view {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+
+.yyDetail .yyDetailContent .btns view:nth-child(1) {
+    color: #4C87FD;
+    border-bottom: 1rpx solid #dbdbdb;
+}
+
+
+.yyDetail .yyDetailContent .btns view:nth-child(2) {
+    color: red;
+}

@@ -1,2 +1,64 @@
-<!--menzhen/yuyue/yuyue.wxml-->
-<text>menzhen/yuyue/yuyue.wxml</text>
+<view class="doctorInfo">
+    <view class="images">
+        <image src="../../static/icon/doctor.png" alt="" />
+    </view>
+    <view class="remake">简介：皮肤科门诊。能够用科学或技术的手段来处理人类疾病，预防出生缺陷提高人口素质，治病救人改善病患人类生活质量，并以习研究医学</view>
+</view>
+
+<view class="selectDate">
+    <view class="{{ selectDate === item.time ? 'dateRows y' : 'dateRows' }}" wx:for="{{ dates }}">
+        <view class="rowsViews" bind:tap="changeTimes" data-item="{{ item }}">
+            <view>{{ item.date }}</view>
+            <view>{{ item.name }}</view>
+        </view>
+    </view>
+</view>
+
+<view class="paibanRows" wx:for="{{ paibanList }}" bind:tap="paibanTap" data-item="{{ item }}">
+    <view class="content">
+        <view class="paibanDate">{{ item.date }}</view>
+        <view class="paibanBtom">
+            <view>{{ item.ampm + "（" + item.type + "）" }}</view>
+            <view>{{ '余' + item.hy + '号' }}</view>
+        </view>
+    </view>
+    <image src="../../static/icon/right.png" mode="" />
+</view>
+
+<view class="yyDetail" wx:if="{{ showDetail }}">
+    <view class="yyDetailContent">
+        <view class="titles">预约详情</view>
+        <view class="userInfo">
+            <view>就诊人</view>
+            <view>6****************4|赵先生</view>
+            <image src="../../static/icon/right.png" mode="" />
+        </view>
+        <view class="yyInfo">
+            <view class="yyRows">
+                <view>科室</view>
+                <view>皮肤科门诊</view>
+            </view>
+            <view class="yyRows">
+                <view>费用</view>
+                <view style="color: red;">4元</view>
+            </view>
+            <view class="yyRows">
+                <view>就诊地点</view>
+                <view>柯坪县人民医院</view>
+            </view>
+            <view class="yyRows">
+                <view>就诊日期</view>
+                <view>2022-09-10</view>
+            </view>
+            <view class="yyRows">
+                <view>就诊时间</view>
+                <view>点击选择预约时间</view>
+            </view>
+        </view>
+        <view class="btns">
+            <view>确认挂号</view>
+            <view bind:tap="cancle">取消</view>
+        </view>
+    </view>
+
+</view>
