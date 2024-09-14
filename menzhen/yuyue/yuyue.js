@@ -90,7 +90,8 @@ Page({
     },
     cancle () {
         this.setData({
-            showDetail: false
+            showDetail: false,
+            selectTime: null
         })
     },
     showSelectTimes () {
