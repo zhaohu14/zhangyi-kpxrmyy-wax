@@ -1,5 +1,4 @@
 // menzhen/yuyueDetail/yuyueDetail.js
-// import wxbarcode from 'wxbarcode'
 const barcode = require('../../utils/barcode')
 Page({
 
@@ -15,9 +14,7 @@ Page({
    */
   onLoad(options) {
       console.log(barcode)
-      barcode.code128(wx.createCanvasContext('barCode'), 123465, 180, 50)
-    // barcode.code128
-    // wxbarcode.barcode('barcode', '1234567890123456789', 680, 200);
+      barcode.code128(wx.createCanvasContext('barCode'), '65626461463103', 340, 80)
   },
 
   /**
