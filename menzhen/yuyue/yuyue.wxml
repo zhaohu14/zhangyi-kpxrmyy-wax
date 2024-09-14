@@ -50,15 +50,34 @@
                 <view>就诊日期</view>
                 <view>2022-09-10</view>
             </view>
-            <view class="yyRows">
+            <view class="yyRows" bind:tap="showSelectTimes">
                 <view>就诊时间</view>
-                <view>点击选择预约时间</view>
+                <view>{{ selectTime ? selectTime : '点击选择预约时间' }}</view>
             </view>
         </view>
         <view class="btns">
-            <view>确认挂号</view>
+            <view bind:tap="confirmYuYue">确认挂号</view>
             <view bind:tap="cancle">取消</view>
         </view>
     </view>
 
+</view>
+
+<view class="timeDetail" wx:if="{{ showTimeDetail }}">
+    <view class="timeContent">
+        <view class="timeTitles">请选择预约时间</view>
+        <view class="selectTime">
+            <view class="timeRows" wx:for="{{ timeList }}" bind:tap="changSelectTimes" data-index="{{ index }}">
+                <view class="selectView">
+                    <image wx:if="{{ item.select }}" src="../../static/icon/select.png" mode=""/>
+                </view>
+                <view class="timeView">{{ item.time }}</view>
+            </view>
+        </view>
+        <view class="timeBtns">
+            <view bind:tap="cancelTimeSelect">取消</view>
+            <view bind:tap="confrimTime">确认</view>
+        </view>
+    </view>
+    
 </view>

@@ -10,6 +10,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "menzhen/yuyueDetail/yuyueDetail",
+          "pathName": "menzhen/yuyueDetail/yuyueDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "menzhen/cardList/cardList",
           "pathName": "menzhen/cardList/cardList",
           "query": "",

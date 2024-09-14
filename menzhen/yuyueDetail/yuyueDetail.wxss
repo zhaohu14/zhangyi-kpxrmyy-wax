@@ -1,0 +1,5 @@
+/* menzhen/yuyueDetail/yuyueDetail.wxss */
+.barCode {
+    width: 100%;
+    height: 200rpx;
+}

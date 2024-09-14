@@ -1,0 +1,6 @@
+<!--menzhen/yuyueDetail/yuyueDetail.wxml-->
+<text>menzhen/yuyueDetail/yuyueDetail.wxml</text>
+<view class="barCode">
+    <canvas id="barCode" canvas-id="barCode"/>
+    
+</view>

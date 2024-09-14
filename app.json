@@ -13,7 +13,8 @@
         "paiban/paiban",
         "cardDetail/cardDetail",
         "cardList/cardList",
-        "yuyue/yuyue"
+        "yuyue/yuyue",
+        "yuyueDetail/yuyueDetail"
       ]
     }
   ],

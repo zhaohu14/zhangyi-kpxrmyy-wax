@@ -26,7 +26,43 @@ Page({
                 hy: 40
             }
         ],
-        showDetail: false
+        showDetail: false,
+        showTimeDetail: false,
+        timeList: [
+            {
+                time: '10:00 - 11:00',
+                select: true
+            },
+            {
+                time: '11:00 - 12:00',
+                select: false
+            },
+            {
+                time: '12:00 - 13:00',
+                select: false
+            },
+            {
+                time: '12:00 - 13:00',
+                select: false
+            },
+            {
+                time: '12:00 - 13:00',
+                select: false
+            },
+            {
+                time: '12:00 - 13:00',
+                select: false
+            },
+            {
+                time: '12:00 - 13:00',
+                select: false
+            },
+            {
+                time: '12:00 - 13:00',
+                select: false
+            }
+        ],
+        selectTime: null
     },
 
     /**
@@ -55,6 +91,59 @@ Page({
     cancle () {
         this.setData({
             showDetail: false
+        })
+    },
+    showSelectTimes () {
+        this.setData({
+            showTimeDetail: true
+        })
+    },
+    changSelectTimes (e) {
+        const index = e.currentTarget.dataset.index
+        let timeList = this.data.timeList
+        timeList.forEach(ret => {
+            ret.select = false
+        })
+        timeList[index].select = true
+        this.setData({
+            timeList
+        })
+    },
+    cancelTimeSelect () {
+        this.setData({
+            showTimeDetail: false
+        })
+    },
+    confrimTime() {
+        /* 选中处理*/
+        let timeList = this.data.timeList
+        let selectTime = null
+        timeList.forEach(ret => {
+            if (ret.select) {
+                selectTime = ret.time
+            }
+        })
+        this.setData({
+            selectTime,
+            showTimeDetail: false
+        })
+        /* 接口逻辑完成后，跳转预约详情页面 */
+        // wx.navigateTo({
+        //   url: '/menzhen/yuyueDetail/yuyueDetail',
+        // })
+    },
+    confirmYuYue () {
+        if (!this.data.selectTime) {
+            return wx.showModal({
+                title: '温馨提示',
+                content: '请选择就诊时间',
+                showCancel: false,
+                confirmText: '我已知晓'
+            })
+        }
+        /* 确认挂号调用接口后跳转预约详情页面 */
+        wx.navigateTo({
+          url: '/menzhen/yuyueDetail/yuyueDetail',
         })
     },
 
