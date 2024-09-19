@@ -14,7 +14,9 @@
         "cardDetail/cardDetail",
         "cardList/cardList",
         "yuyue/yuyue",
-        "yuyueDetail/yuyueDetail"
+        "yuyueDetail/yuyueDetail",
+        "payFee/payFee",
+        "payFeeDetail/payFeeDetail"
       ]
     }
   ],

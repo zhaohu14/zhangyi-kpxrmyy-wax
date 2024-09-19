@@ -1,0 +1,103 @@
+<view class="header">
+    <view class="headerContent">
+        <view class="left">当前就诊人：赵虎</view>
+        <image class="cardImg" src="../../static/icon/card.png" mode=""/>
+        <image src="../../static/icon/right.png" mode=""/>
+    </view>
+</view>
+<view class="selectTime">
+    <view class="selectTimeContent">
+        <view class="title">开始时间</view>
+        <view class="time">
+            <picker mode="date" bindchange="changeTime" data-type="startTime" end="{{ endTime }}">
+                {{ startTime ? startTime : '不限' }}
+            </picker>
+        </view>
+        <view class="title">至</view>
+        <view class="time">
+            <picker mode="date" bindchange="changeTime" data-type="endTime" start="{{ startTime }}">
+                {{ endTime ? endTime : '不限' }} 
+            </picker>
+        </view>
+        <view class="title">结束时间</view>
+    </view>
+</view>
+
+<view class="selectType">
+    <view class="{{ selectListType === '0' ? 'y' : '' }}" bind:tap="changeType" data-type="0">待支付</view>
+    <view class="{{ selectListType === '1' ? 'y' : '' }}" bind:tap="changeType" data-type="1">已缴费</view>
+</view>
+
+<view class="listView" wx:if="{{ selectListType === '0' }}">
+    <view class="listRows" wx:for="{{ payFeeList }}">
+        <view class="title" bind:tap="changeSelect" data-index="{{ index }}">
+            <image src="{{ item.select ? '../../static/icon/selectY.png' : '../../static/icon/selectN.png' }}" mode=""/>
+            <view>{{ item.itemName }}</view>
+        </view>
+        <view class="listContent">
+            <view class="rowsDetail">
+                <view class="detailRows">
+                    <view>科室：</view>
+                    <view>{{ item.dept }}</view>
+                </view>
+                <view class="detailRows">
+                    <view>医生：</view>
+                    <view>{{ item.doctor }}</view>
+                </view>
+                <view class="detailRows">
+                    <view>总金额：</view>
+                    <view style="color: red;">{{ item.totalMoney }}</view>
+                </view>
+                <view class="detailRows">
+                    <view>开单时间：</view>
+                    <view>{{ item.time }}</view>
+                </view>
+            </view>
+            <image src="../../static/icon/right.png" mode=""/>
+        </view>
+    </view>
+
+</view>
+
+<view class="listView" wx:if="{{ selectListType === '1' }}">
+    <view class="listRows" wx:for="{{ payFeeList }}">
+        <view class="title">
+            <view>{{ item.itemName }}</view>
+        </view>
+        <view class="listContent">
+            <view class="rowsDetail">
+                <view class="detailRows">
+                    <view>科室：</view>
+                    <view>{{ item.dept }}</view>
+                </view>
+                <view class="detailRows">
+                    <view>医生：</view>
+                    <view>{{ item.doctor }}</view>
+                </view>
+                <view class="detailRows">
+                    <view>总金额：</view>
+                    <view>{{ item.totalMoney }}</view>
+                </view>
+                <view class="detailRows">
+                    <view>开单时间：</view>
+                    <view>{{ item.time }}</view>
+                </view>
+            </view>
+            <image src="../../static/icon/right.png" mode=""/>
+        </view>
+    </view>
+
+</view>
+
+<view class="bottomView" wx:if="{{ selectListType === '0' }}">
+    <view class="bottomLeft">
+        <image bind:tap="changAll" src="{{ selectAll ? '../../static/icon/selectY.png' : '../../static/icon/selectN.png' }}" mode=""/>
+        <view class="all">全选</view>
+        <view class="moneyView">
+            <text>合计金额：</text>
+            <text style="color: red;">￥{{ totalMoney }}</text>
+            <text>元</text>
+        </view>
+    </view>
+    <view class="toPayView" bind:tap="toPayFeeDetail">去支付</view>
+</view>

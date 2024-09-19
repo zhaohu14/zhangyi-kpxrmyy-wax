@@ -34,7 +34,7 @@
         </view>
     </view>
     <view class="funcBtns" style="margin-top: -10rpx;">
-        <view class="btns">
+        <view class="btns" bind:tap="toPayFee">
             <image class="bgImage" src="../../static/home/jf.png" mode="" />
             <view class="title">
                 <view>缴费</view>

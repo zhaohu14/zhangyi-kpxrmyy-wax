@@ -1,0 +1,179 @@
+page {
+    background-color: rgb(247, 247, 247);
+}
+.header {
+    width: 100%;
+    height: 80rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid rgb(247, 247, 247);
+}
+
+.header .headerContent {
+    width: 95%;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5%;
+}
+
+
+
+.header  image {
+    width: 40rpx;
+    height: 40rpx;
+    /* margin-right: 20rpx; */
+}
+
+.header  .cardImg {
+    width: 70rpx;
+    height: 60rpx;
+}
+
+.header .left {
+    width: calc(100% - 120rpx);
+}
+
+.selectTime {
+    width: 100%;
+    height: 100rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid rgb(247, 247, 247);
+}
+
+.selectTimeContent {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+}
+
+.selectTimeContent view {
+    margin: auto;
+}
+
+.selectTimeContent .time {
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1rpx solid #d6d5d5;
+    border-radius: 80rpx;
+    width: 180rpx;
+    text-align: center;
+}
+
+.selectTimeContent .title {
+    color: #d6d5d5;
+    line-height: 100rpx;
+}
+
+.selectType {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    background-color: #fff;
+}
+
+.selectType view {
+    width: 50%;
+    text-align: center;
+}
+
+.selectType .y {
+    color: #4C87FD;
+}
+.listView {
+    margin-top: 20rpx;
+}
+.listRows {
+    width: 100%;
+    min-height: 250rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid #dbdbdb;
+    padding: 10rpx 0;
+}
+.listRows .title {
+    width: 95%;
+    margin-left: 2.5%;
+    height: 60rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.listRows .title image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+}
+
+.listRows .listContent {
+    width: 95%;
+    min-height: 170rpx;
+    margin-left: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listRows .listContent image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.listRows .listContent .rowsDetail {
+    width: calc(100% - 40rpx);
+}
+
+.listRows .listContent .rowsDetail .detailRows {
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    display: flex;
+    font-size: 28rpx;
+}
+
+.bottomView {
+    width: 100%;
+    height: 120rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomView .bottomLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% - 200rpx);
+    margin-left: 20rpx;
+}
+
+.bottomView image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    
+}
+
+.bottomView .bottomLeft .all {
+    color: #7e7e7e;
+    margin-right: 20rpx;
+}
+
+.bottomView .toPayView {
+    width: 180rpx;
+    height: 120rpx;
+    text-align: center;
+    color: #fff;
+    line-height: 120rpx;
+    background-color: #4C87FD;
+    font-size: 34rpx;
+    font-weight: 600;
+}

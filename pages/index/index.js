@@ -135,5 +135,10 @@ Page({
       wx.navigateTo({
         url: item.url,
       })
-  }
+  },
+  toPayFee () {
+      wx.navigateTo({
+        url: '/menzhen/payFee/payFee',
+      })
+  },
 })

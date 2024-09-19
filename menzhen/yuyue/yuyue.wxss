@@ -254,7 +254,7 @@ page {
     width: 99%;
     height: 80rpx;
     margin-top: 20rpx;
-    border: 1rpx solid #dbdbdb;
+    /* border: 1rpx solid #dbdbdb; */
     display: flex;
     justify-content: flex-start;
     align-items: center;

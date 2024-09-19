@@ -10,6 +10,20 @@
     "miniprogram": {
       "list": [
         {
+          "name": "menzhen/payFeeDetail/payFeeDetail",
+          "pathName": "menzhen/payFeeDetail/payFeeDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "menzhen/payFee/payFee",
+          "pathName": "menzhen/payFee/payFee",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "menzhen/yuyueDetail/yuyueDetail",
           "pathName": "menzhen/yuyueDetail/yuyueDetail",
           "query": "",
