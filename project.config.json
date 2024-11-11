@@ -1,10 +1,6 @@
 {
   "compileType": "miniprogram",
   "libVersion": "trial",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
   "setting": {
     "coverView": true,
     "es6": true,
@@ -30,6 +26,10 @@
   "editorSetting": {
     "tabIndent": "auto",
     "tabSize": 2
+  },
+  "packOptions": {
+    "ignore": [],
+    "include": []
   },
   "appid": "wx10e0325fc867ef97"
 }

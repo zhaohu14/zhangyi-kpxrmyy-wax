@@ -44,6 +44,25 @@ Page({
     onLoad(options) {
 
     },
+    toYB() {
+        wx.navigateToMiniProgram({
+            // extraData: extraData,
+            appId: 'wxe183cd55df4b4369',
+            // path: 'pages/bindcard/bindcard3/main?openType=getAuthCode&cityCode=650100&channel=AAEV6oqx5us2u65cLzfySw3a&orgChnlCrtfCodg=BqK1kMStlhVDgN2uHf4EsLK/F2LjZPYJ81nK2eYQqxu9rpwUIHTBrf+C4kTCO8bn&orgCodg=H65010400049&bizType=04107&orgAppId=1GA86O34L04C3F60C80A0000E70CC7A8', // 测试路径
+            path: 'pages/bindcard/bindcard3/main?openType=getAuthCode&cityCode=650100&channel=AAEV6oqx5us2u65cLzfySw3a&orgChnlCrtfCodg=BqK1kMStlhVDgN2uHf4EsLK/F2LjZPYJ81nK2eYQqxu9rpwUIHTBrf+C4kTCO8bn&orgCodg=H65010400049&bizType=04107&orgAppId=1GGF309UI04GE1470B0A000099419889', // 正式路径
+            extraData: {
+                foo: 'bar'
+            },
+            // envVersion:'trial',
+            envVersion: 'release',
+            success(res) {
+                console.log(res, '打开成功')
+            },
+            fail(err) {
+                console.log(err, '-----')
+            }
+        })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成

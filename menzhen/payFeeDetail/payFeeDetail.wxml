@@ -59,6 +59,6 @@
     <view>自费支付</view>
 </view> -->
 <view class="btns">
-    <view>医保支付</view>
+    <view bind:tap="toYB">医保支付</view>
     <view>自费支付</view>
 </view>
