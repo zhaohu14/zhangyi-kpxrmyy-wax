@@ -1,0 +1,22 @@
+<!--menzhen/recharge/recharge.wxml-->
+<view class="cardInfo">
+    <view class="name">当前就诊人：赵虎</view>
+    <view class="qh">点击切换</view>
+    <image src="../../static/icon/right.png" mode="" />
+</view>
+
+<view class="input">
+  <view class="inputView">
+    <view class="titles">充值金额：</view>
+    <view class="iptview">
+      <input type="text" placeholder="请输入充值金额" value="{{ money }}"/>
+    </view>
+  </view>
+  <view class="moneyList">
+    <view class="{{ money === '100' ? 'y' : '' }}" bind:tap="changeMoney" data-money="100">100元</view>
+    <view class="{{ money === '200' ? 'y' : '' }}" bind:tap="changeMoney" data-money="200">200元</view>
+    <view class="{{ money === '300' ? 'y' : '' }}" bind:tap="changeMoney" data-money="300">300元</view>
+    <view class="{{ money === '400' ? 'y' : '' }}" bind:tap="changeMoney" data-money="400">400元</view>
+  </view>
+  <view class="pay">充值</view>
+</view>

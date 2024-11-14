@@ -1,0 +1,55 @@
+<view class="cardInfo">
+  <view class="name">当前就诊人：赵虎</view>
+  <view class="qh">点击切换</view>
+  <image src="../../static/icon/right.png" mode="" />
+</view>
+<view class="switchTypeView">
+  <view class="{{ type === '0' ? 'y' : '' }}" bind:tap="changeTypeFunc" data-type="0">检查报告</view>
+  <view class="{{ type === '1' ? 'y' : '' }}" bind:tap="changeTypeFunc" data-type="1">检验报告</view>
+</view>
+<view class="content">
+  <view class="rows" bind:tap="toDetail">
+    <view class="date">
+      <view>周二</view>
+      <view>11/11</view>
+    </view>
+    <view class="center">
+      <view>入职体检</view>
+      <view>￥26.00</view>
+    </view>
+    <image class="right" src="../../static/icon/right.png" mode="" />
+  </view>
+  <view class="rows" bind:tap="toDetail">
+    <view class="date">
+      <view>周二</view>
+      <view>11/11</view>
+    </view>
+    <view class="center">
+      <view>入职体检1</view>
+      <view>￥26.00</view>
+    </view>
+    <image class="right" src="../../static/icon/right.png" mode="" />
+  </view>
+  <view class="rows" bind:tap="toDetail">
+    <view class="date">
+      <view>周二</view>
+      <view>11/11</view>
+    </view>
+    <view class="center">
+      <view>入职体检</view>
+      <view>￥26.00</view>
+    </view>
+    <image class="right" src="../../static/icon/right.png" mode="" />
+  </view>
+  <view class="rows" bind:tap="toDetail">
+    <view class="date">
+      <view>周二</view>
+      <view>11/11</view>
+    </view>
+    <view class="center">
+      <view>入职体检</view>
+      <view>￥26.00</view>
+    </view>
+    <image class="right" src="../../static/icon/right.png" mode="" />
+  </view>
+</view>

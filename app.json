@@ -16,7 +16,10 @@
         "yuyue/yuyue",
         "yuyueDetail/yuyueDetail",
         "payFee/payFee",
-        "payFeeDetail/payFeeDetail"
+        "payFeeDetail/payFeeDetail",
+        "recharge/recharge",
+        "reports/reports",
+        "reportDetail/reportDetail"
       ]
     }
   ],

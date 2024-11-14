@@ -18,7 +18,7 @@ Page({
         {
             title: '一卡通充值',
             icon: '../../static/home/11.png',
-            url: '',
+            url: '/menzhen/recharge/recharge',
             id: 11
         },
         {
@@ -116,6 +116,11 @@ Page({
       if (dataset.type === 'zy') {
         return this.toZyPage(dataset.item)
     }
+  },
+  toReports () {
+    wx.navigateTo({
+      url: '/menzhen/reports/reports',
+    })
   },
   toYYGH (e) {
       console.log(e)

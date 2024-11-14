@@ -1,0 +1,44 @@
+<view class="cardInfo">
+  <view class="name">当前就诊人：赵虎</view>
+  <view class="qh">点击切换</view>
+  <image src="../../static/icon/right.png" mode="" />
+</view>
+<view class="reportInfo">
+  <view class="info">
+    <view>科室：皮肤科</view>
+    <view>检查项目：血常规检查</view>
+    <view>报告时间：2024-11-01 15:39</view>
+    <view>诊断结果： 皮炎</view>
+  </view>
+</view>
+
+<view class="detail">
+  <view class="rows">
+    <view class="title rowsDetail">
+      <view>项目名称</view>
+    </view>
+    <view class="unit rowsDetail">
+      <view>单位</view>
+    </view>
+    <view class="result rowsDetail">
+      <view>检验结果</view>
+    </view>
+    <view class="ckfw rowsDetail">
+      <view>参考范围</view>
+    </view>
+  </view>
+  <view class="rows detailView" wx:for="{{ list }}">
+    <view class="title rowsDetail">
+      <view>{{ item.name }}</view>
+    </view>
+    <view class="unit rowsDetail">
+      <view>{{ item.unit }}</view>
+    </view>
+    <view class="result rowsDetail" style="{{ 'color:' +  item.resutCode }}">
+      <view>{{ item.result + item.resultName }}</view>
+    </view>
+    <view class="ckfw rowsDetail">
+      <view>{{ item.ckfw }}</view>
+    </view>
+  </view>
+</view>

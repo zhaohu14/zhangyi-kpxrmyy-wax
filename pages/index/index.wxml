@@ -41,7 +41,7 @@
                 <view>门诊手机立马缴费</view>
             </view>
         </view>
-        <view class="btns">
+        <view class="btns" bind:tap="toReports">
             <image class="bgImage" src="../../static/home/bgck.png" mode="" />
             <view class="title">
                 <view>报告单</view>
