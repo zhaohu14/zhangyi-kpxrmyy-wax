@@ -1,0 +1,12 @@
+<van-cell-group inset>
+    <image src="https://img.yaopinnet.com/img500/202106/zpyl296g67xncnv3.jpg" mode=""/>
+</van-cell-group>
+
+<van-cell-group>
+    <van-cell title="名称" value="阿莫西林"></van-cell>
+    <van-cell title="单位" value="盒"></van-cell>
+    <van-cell title="规格" value="****"></van-cell>
+    <van-cell title="单价" value="20元"></van-cell>
+    <van-cell title="厂商" value="****医药公司"></van-cell>
+    <van-cell title="描述" value="阿莫西林阿莫西林阿莫西林阿莫西林阿莫西林阿莫西林阿莫西林阿莫西林阿莫西林阿莫西林阿莫西林阿莫西林"></van-cell>
+</van-cell-group>

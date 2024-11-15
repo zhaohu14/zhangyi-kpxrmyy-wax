@@ -1,0 +1,31 @@
+<!--menzhen/paymentRecord/paymentRecord.wxml-->
+<view class="header">
+    <view class="headerContent">
+        <view class="left">当前就诊人：赵虎</view>
+        <image class="cardImg" src="../../static/icon/card.png" mode=""/>
+        <image src="../../static/icon/right.png" mode=""/>
+    </view>
+</view>
+<view class="selectTime">
+    <view class="selectTimeContent">
+        <view class="title">开始时间</view>
+        <view class="time">
+            <picker mode="date" bindchange="changeTime" data-type="startTime" end="{{ endTime }}">
+                {{ startTime ? startTime : '不限' }}
+            </picker>
+        </view>
+        <view class="title">至</view>
+        <view class="time">
+            <picker mode="date" bindchange="changeTime" data-type="endTime" start="{{ startTime }}">
+                {{ endTime ? endTime : '不限' }} 
+            </picker>
+        </view>
+        <view class="title">结束时间</view>
+    </view>
+</view>
+<view class="rows" wx:for="{{ 5 }}">
+    <van-cell border="{{ false }}" icon="gold-coin" title="充值成功"></van-cell>
+    <van-cell title="充值金额" value="20元"></van-cell>
+    <van-cell title="充值方式" value="微信支付"></van-cell>
+    <van-cell title="充值时间" value="2022-09-20 15:33"></van-cell>
+</view>

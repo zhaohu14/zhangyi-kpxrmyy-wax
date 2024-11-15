@@ -1,0 +1,10 @@
+<!--menzhen/hospitalJS/hospitalJS.wxml-->
+<view class="toHospitalHeader">
+        <image src="https://tse2-mm.cn.bing.net/th/id/OIP-C.FXcznu5jbYoxxJD3mQZ8-gHaFj?rs=1&pid=ImgDetMain" mode=""/>
+</view>
+<view class="titles">柯坪县人民医院</view>
+<view class="detail">
+    <view>
+        柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院柯坪县人民医院
+    </view>
+</view>

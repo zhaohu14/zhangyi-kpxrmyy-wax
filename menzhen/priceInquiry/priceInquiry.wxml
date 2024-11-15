@@ -1,0 +1,10 @@
+<!--menzhen/priceInquiry/priceInquiry.wxml-->
+<van-search
+  value="{{ value }}"
+  shape="round"
+  background="#4C87FD"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+>
+</van-search>
+<van-cell wx:for="{{ 15 }}" title="阿莫西林" is-link bind:tap="toDetail"/>

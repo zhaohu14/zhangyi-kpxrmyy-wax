@@ -1,0 +1,11 @@
+<view class="header">
+    <view class="headerContent">
+        <view class="left">当前就诊人：赵虎</view>
+        <image class="cardImg" src="../../static/icon/card.png" mode=""/>
+        <image src="../../static/icon/right.png" mode=""/>
+    </view>
+</view>
+
+<van-cell-group inset>
+    <van-cell style="margin-bottom: 4rpx;" wx:for="{{ 12 }}" icon="coupon-o" title="发票时间：2022-03-25" value="点击查看发票" bind:tap="toDetail"></van-cell>
+</van-cell-group>

@@ -34,7 +34,7 @@
             <image src="{{ item.select ? '../../static/icon/selectY.png' : '../../static/icon/selectN.png' }}" mode=""/>
             <view>{{ item.itemName }}</view>
         </view>
-        <view class="listContent">
+        <view class="listContent" bind:tap="toPayFeeDetail">
             <view class="rowsDetail">
                 <view class="detailRows">
                     <view>科室：</view>

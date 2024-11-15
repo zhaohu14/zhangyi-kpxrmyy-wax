@@ -1,0 +1,16 @@
+<view class="header">
+    <view class="headerContent">
+        <view class="left">当前就诊人：赵虎</view>
+        <image class="cardImg" src="../../static/icon/card.png" mode=""/>
+        <image src="../../static/icon/right.png" mode=""/>
+    </view>
+</view>
+
+<view class="rows" wx:for="{{ list }}">
+    <van-cell border="{{ false }}" icon="/static/icon/awit.png" title="{{ item.type }}"></van-cell>
+    <van-cell title="就诊地点" value="{{ item.dept }}"></van-cell>
+    <van-cell title="就诊日期" value="{{ item.time }}"></van-cell>
+    <van-cell title="当前叫号" value="{{ item.dqhx }}"></van-cell>
+    <van-cell title="当前等待人数" value="{{ item.awitNumber + '人' }}"></van-cell>
+    <van-cell title="我的就诊号" value="{{ item.myh }}"></van-cell>
+</view>

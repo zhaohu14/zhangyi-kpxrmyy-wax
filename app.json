@@ -19,7 +19,24 @@
         "payFeeDetail/payFeeDetail",
         "recharge/recharge",
         "reports/reports",
-        "reportDetail/reportDetail"
+        "reportDetail/reportDetail",
+        "priceInquiry/priceInquiry",
+        "priceInquiryDetail/priceInquiryDetail",
+        "paymentRecord/paymentRecord",
+        "invoiceList/invoiceList",
+        "invoiceListDetail/invoiceListDetail",
+        "mzAwait/mzAwait",
+        "yuyueList/yuyueList",
+        "hospitalDetail/hospitalDetail",
+        "hospitalJS/hospitalJS"
+      ]
+    },
+    {
+      "root": "zhuyuan",
+      "name": "zhuyuan",
+      "pages": [
+        "fee/fee",
+        "feeDetail/feeDetail"
       ]
     }
   ],

@@ -5,6 +5,9 @@
     <image src="../../static/icon/right.png" mode="" />
 </view>
 
+<view>
+    <van-cell title="当前待缴费金额" value="100元"></van-cell>
+</view>
 <view class="input">
   <view class="inputView">
     <view class="titles">充值金额：</view>

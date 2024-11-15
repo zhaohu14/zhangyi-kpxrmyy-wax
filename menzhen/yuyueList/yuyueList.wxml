@@ -1,0 +1,18 @@
+<view class="header">
+    <view class="headerContent">
+        <view class="left">当前就诊人：赵虎</view>
+        <image class="cardImg" src="../../static/icon/card.png" mode=""/>
+        <image src="../../static/icon/right.png" mode=""/>
+    </view>
+</view>
+
+<view class="rows" wx:for="{{ 2 }}">
+    <van-cell border="{{ false }}" title="皮肤科"></van-cell>
+    <van-cell title="预约科室" value="皮肤科"></van-cell>
+    <van-cell title="预约医生" value="张三"></van-cell>
+    <van-cell title="预约类型" value="专家门诊"></van-cell>
+    <van-cell title="就诊日期" value="2024-03-29 上午"></van-cell>
+    <van-cell title="预约状态" value="待就诊"></van-cell>
+    <view class="btn" bind:tap="toyyjfDetail">查看详情</view>
+    
+</view>

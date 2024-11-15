@@ -1,0 +1,32 @@
+/* menzhen/invoiceListDetail/invoiceListDetail.wxss */
+page {
+    background-color: rgb(247, 247, 247);
+    padding-bottom: 30rpx;
+    padding-top: 30rpx;
+}
+.content {
+    width: 95%;
+    height: 400rpx;
+    background-color: #fff;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-left: 2.5%;
+    border-radius: 20rpx;
+}
+.content image {
+    width: 90%;
+    height: 320rpx;
+    margin-left: 5%;
+}
+.btn {
+    width: 80%;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #4C87FD;
+    color: #fff;
+    margin-left: 10%;
+    border-radius: 10rpx;
+    margin-top: 80rpx;
+}

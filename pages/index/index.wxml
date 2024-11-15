@@ -8,7 +8,7 @@
             <view class="searchBtn">搜索</view>
         </view>
         <view class="cardView">
-            <view class="noCard" wx:if="{{ !cardInfo }}">
+            <view bind:tap="toAddCard" class="noCard" wx:if="{{ !cardInfo }}">
                 <view class="addCardView">绑定就诊卡/电子健康卡</view>
             </view>
             <image class="bgImage" src="../../static/health_card_template.png" mode=""/>
@@ -65,7 +65,7 @@
     <van-tab title="住院服务">
         <view class="tabsView">
             <view class="tabsView">
-                <view wx:for="{{ zyList }}" class="funcBtnRows" wx:key="id">
+                <view wx:for="{{ zyList }}" class="funcBtnRows" wx:key="id" bind:tap="toPage" data-item="{{ item }}" data-type="zy">
                     <view class="icon">
                         <image src="{{ item.icon }}" mode="" />
                     </view>
@@ -80,7 +80,7 @@
         <view class="tabsView">
             <view class="tabsView">
                 <view class="tabsView">
-                    <view wx:for="{{ pdhzList }}" class="funcBtnRows" wx:key="id">
+                    <view wx:for="{{ pdhzList }}" class="funcBtnRows" wx:key="id" bind:tap="toPage" data-item="{{ item }}" data-type="mz" >
                         <view class="icon">
                             <image src="{{ item.icon }}" mode="" />
                         </view>
@@ -99,7 +99,7 @@
         <view>微官网</view>
     </view>
     <view class="gwViews">
-        <view class="l c">
+        <view class="l c" bind:tap="toHospitalDetail">
             <view class="title">医院信息</view>
             <view class="smallTitle">医院简介、科室简介等信息</view>
             <image src="../../static/home/bottom1.png" mode="" />

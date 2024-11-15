@@ -1,0 +1,44 @@
+<!--zhuyuan/feeDetail/feeDetail.wxml-->
+<van-cell-group inset>
+    <van-cell title="姓名" value="赵虎"></van-cell>
+    <van-cell title="住院号" value="000000"></van-cell>
+    <van-cell title="住院日期" value="2022-04-05"></van-cell>
+    <van-cell title="清单日期" value="2022-04-05"></van-cell>
+    <van-cell title="科室" value="心内科"></van-cell>
+    <van-cell title="病床号" value="06"></van-cell>
+</van-cell-group>
+
+<view class="detail">
+  <view class="rows">
+    <view class="title rowsDetail">
+      <view>项目名称</view>
+    </view>
+    <view class="number rowsDetail">
+      <view>数量</view>
+    </view>
+    <view class="unit rowsDetail">
+      <view>单位</view>
+    </view>
+    <view class="result rowsDetail">
+      <view>总价</view>
+    </view>
+  </view>
+  <view class="rows detailView" wx:for="{{ 5 }}">
+    <view class="title rowsDetail">
+      <view>{{ '一级护理' }}</view>
+    </view>
+    <view class="number rowsDetail">
+      <view>{{ '1' }}</view>
+    </view>
+    <view class="unit rowsDetail">
+      <view>{{ '次' }}</view>
+    </view>
+    <view class="result rowsDetail">
+      <view>{{ '10元' }}</view>
+    </view>
+  </view>
+  <view class="totalMoney">
+    <view>今日小计</view>
+    <view>金额：50元</view>
+  </view>
+</view>

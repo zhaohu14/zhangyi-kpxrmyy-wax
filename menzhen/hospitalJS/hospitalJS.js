@@ -1,31 +1,18 @@
-// menzhen/recharge/recharge.js
+// menzhen/hospitalJS/hospitalJS.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    money: '100'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    if (options.type === 'zy') {
-        wx.setNavigationBarTitle({
-          title: '住院预缴'
-        })
-    } else {
-      wx.setNavigationBarTitle({
-          title: '门诊充值'
-        })
-    }
-  },
-  changeMoney (e) {
-    this.setData({
-      money: e.currentTarget.dataset.money
-    })
+
   },
 
   /**

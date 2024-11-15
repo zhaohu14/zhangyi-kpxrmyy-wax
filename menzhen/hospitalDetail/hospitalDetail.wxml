@@ -1,0 +1,18 @@
+<!--menzhen/hospitalDetail/hospitalDetail.wxml-->
+<view class="toHospitalHeader">
+        <image src="https://tse2-mm.cn.bing.net/th/id/OIP-C.FXcznu5jbYoxxJD3mQZ8-gHaFj?rs=1&pid=ImgDetMain" mode=""/>
+</view>
+
+<van-cell-group>
+    <van-cell title="柯坪县人民医院" is-link value="医院简介" bind:tap="toYYJJ"></van-cell>
+
+    <van-cell title="医院导航" bind:tap="chooseLocation" is-link clickable="{{ true }}" value="点击导航"></van-cell>
+
+    <van-cell title="科室介绍" is-link clickable="{{ true }}"></van-cell>
+
+    <van-cell title="医院公告" bind:tap="toYYGG" is-link clickable="{{ true }}"></van-cell>
+
+    <van-cell title="来院交通" label="来院交通来院交通来院交通来院交通来院交通来院交通来院交通"></van-cell>
+
+    <van-cell title="联系电话" bind:tap="startPhone" is-link clickable="{{ true }}"  label="0991-123456" center value="点击快速拨号"></van-cell>
+</van-cell-group>

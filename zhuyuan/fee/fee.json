@@ -2,5 +2,5 @@
   "usingComponents": {
     "van-cell": "@vant/weapp/cell/index"
   },
-  "navigationBarTitleText": ""
+  "navigationBarTitleText": "住院清单"
 }

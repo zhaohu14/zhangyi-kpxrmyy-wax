@@ -11,7 +11,7 @@
 
 <view class="meRows top">
     <image class="images" src="../../static/me/yyjl.png" mode="" />
-    <view class="title">预约记录</view>
+    <view class="title" bind:tap="toyyjl">预约记录</view>
     <image class="r" src="../../static/me/right.png" mode="" />
 </view>
 <view class="meRows bottom">

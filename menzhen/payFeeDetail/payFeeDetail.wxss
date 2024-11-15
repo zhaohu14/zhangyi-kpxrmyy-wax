@@ -40,10 +40,12 @@ page {
 
 .header .userInfoRows view:nth-child(1) {
     text-align: left;
+    width: 30%;
 }
 
 .header .userInfoRows view:nth-child(2) {
     text-align: right;
+    width: 70%;
 }
 
 .bottom {

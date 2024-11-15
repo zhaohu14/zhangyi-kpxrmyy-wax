@@ -1,0 +1,8 @@
+/* menzhen/priceInquiryDetail/priceInquiryDetail.wxss */
+page {
+    background-color: rgb(247, 247, 248);
+}
+image {
+    width: 90%;
+    margin-left: 5%;
+}

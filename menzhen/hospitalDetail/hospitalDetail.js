@@ -1,31 +1,36 @@
-// menzhen/recharge/recharge.js
+// menzhen/hospitalDetail/hospitalDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    money: '100'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    if (options.type === 'zy') {
-        wx.setNavigationBarTitle({
-          title: '住院预缴'
-        })
-    } else {
-      wx.setNavigationBarTitle({
-          title: '门诊充值'
-        })
-    }
+
   },
-  changeMoney (e) {
-    this.setData({
-      money: e.currentTarget.dataset.money
-    })
+  startPhone () {
+      wx.makePhoneCall({
+        phoneNumber: '0990-123456',
+      })
+  },
+  chooseLocation() {
+      wx.openLocation({
+        latitude: 40.506536,
+        longitude: 79.046808,
+        name: "柯坪县人民医院",
+        scale: 28
+      })
+  },
+  toYYJJ () {
+      wx.navigateTo({
+        url: '/menzhen/hospitalJS/hospitalJS',
+      })
   },
 
   /**

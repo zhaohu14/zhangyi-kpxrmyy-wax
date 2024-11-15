@@ -24,19 +24,19 @@ Page({
         {
             title: '药品查询',
             icon: '../../static/home/12.png',
-            url: '',
+            url: '/menzhen/priceInquiry/priceInquiry?type=drug',
             id: 12
         },
         {
             title: '材料查询',
             icon: '../../static/home/13.png',
-            url: '',
+            url: '/menzhen/priceInquiry/priceInquiry?type=materials',
             id: 13
         },
         {
-            title: '缴费记录',
+            title: '充值记录',
             icon: '../../static/home/14.png',
-            url: '',
+            url: '/menzhen/paymentRecord/paymentRecord',
             id: 14
         },
         {
@@ -48,7 +48,7 @@ Page({
         {
             title: '电子发票查询',
             icon: '../../static/home/16.png',
-            url: '',
+            url: '/menzhen/invoiceList/invoiceList?type=mz',
             id: 16
         },
         
@@ -57,13 +57,13 @@ Page({
         {
             title: '住院费用\n预缴',
             icon: '../../static/home/21.png',
-            url: '',
+            url: '/menzhen/recharge/recharge?type=zy',
             id: 21
         },
         {
             title: '住院一日\n清单查询',
             icon: '../../static/home/22.png',
-            url: '',
+            url: '/zhuyuan/fee/fee',
             id: 22
         },
         {
@@ -81,7 +81,7 @@ Page({
         {
             title: '住院结算\n电子发票',
             icon: '../../static/home/25.png',
-            url: '',
+            url: '/menzhen/invoiceList/invoiceList?type=zy',
             id: 25
         }
     ],
@@ -89,13 +89,13 @@ Page({
         {
             title: '门诊候诊',
             icon: '../../static/home/31.png',
-            url: '',
+            url: '/menzhen/mzAwait/mzAwait?type=门诊候诊',
             id: 31
         },
         {
             title: '检查排队\n取药排队',
             icon: '../../static/home/32.png',
-            url: '',
+            url: '/menzhen/mzAwait/mzAwait?type=检查取药候诊',
             id: 31
         },
     ],
@@ -108,6 +108,11 @@ Page({
         cardInfo: getApp().globalData.cardInfo
       })
   },
+  toHospitalDetail () {
+      wx.navigateTo({
+        url: '/menzhen/hospitalDetail/hospitalDetail',
+      })
+  },
   toPage (e) {
       const dataset = e.currentTarget.dataset
       if (dataset.type === 'mz') {
@@ -116,6 +121,11 @@ Page({
       if (dataset.type === 'zy') {
         return this.toZyPage(dataset.item)
     }
+  },
+  toAddCard () {
+      wx.navigateTo({
+        url: '/menzhen/addErhcCard/addErhcCard',
+      })
   },
   toReports () {
     wx.navigateTo({
@@ -141,6 +151,18 @@ Page({
         url: item.url,
       })
   },
+  toZyPage (item) {
+    /* 需要先判断登录状态和绑卡状态后继续执行方法 */
+    if (!item.url.length) {
+        return wx.showToast({
+          title: '暂未开放',
+          icon: 'none'
+        })
+    }
+    wx.navigateTo({
+      url: item.url,
+    })
+},
   toPayFee () {
       wx.navigateTo({
         url: '/menzhen/payFee/payFee',
