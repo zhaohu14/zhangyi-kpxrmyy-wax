@@ -3,6 +3,7 @@ const { BASE_URL, OrgId } = require('./util')
 
 var requestByHeader = function(url, data, methods, headers) {
     // data.OrgId = OrgId
+    headers = headers ? headers : {}
     data = data ? data : {}
     data.OrgId = OrgId
     return new Promise((resolve, reject) => {
@@ -10,6 +11,9 @@ var requestByHeader = function(url, data, methods, headers) {
         if (headers) {
             header = {
                 'Content-Type': 'application/json; charset=utf-8',
+                'OrgId': OrgId,
+                'HisCashier': 'Web',
+                'TermId': 'Web',
                 ...headers
             }
         }
