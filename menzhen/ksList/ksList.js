@@ -1,6 +1,7 @@
 // menzhen/ksList/ksList.js
 const {
-    indexedSubject
+    indexedSubject,
+    queryDpt
 } = require('../../utils/API')
 Page({
 
@@ -186,7 +187,7 @@ Page({
         this.getList()
     },
     getList() {
-        indexedSubject().then(ret => {
+        queryDpt().then(ret => {
             this.setData({
                 list: ret.list
             })

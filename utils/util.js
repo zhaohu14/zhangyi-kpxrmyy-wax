@@ -44,5 +44,7 @@ const GetDateStr = date => {
 
 module.exports = {
     formatTime,
-    lastTime
+    lastTime,
+    BASE_URL: 'https://kpxrmyy.sunyotas.com', // 请求地址
+    OrgId: 'RSS12632202108230001', // 医院标识
 }

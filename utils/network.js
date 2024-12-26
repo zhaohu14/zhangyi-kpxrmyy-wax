@@ -1,11 +1,15 @@
-const BASE_URL = getApp().globalData.BASE_URL
+// const BASE_URL = getApp().globalData.BASE_URL
+const { BASE_URL, OrgId } = require('./util')
 
 var requestByHeader = function(url, data, methods, headers) {
-
+    // data.OrgId = OrgId
+    data = data ? data : {}
+    data.OrgId = OrgId
     return new Promise((resolve, reject) => {
         let header = {}
         if (headers) {
             header = {
+                'Content-Type': 'application/json; charset=utf-8',
                 ...headers
             }
         }
@@ -15,17 +19,25 @@ var requestByHeader = function(url, data, methods, headers) {
         wx.request({
             url: BASE_URL + url,
             data: data,
-            method: methods && 'GET',
+            method: methods,
             header: {
                 ...header,
                 token: wx.getStorageSync('token')
             },
             success(res) {
                 wx.hideLoading()
-                if (res.data.state !== 'ok') {
+                // if (res.data.Code !== 200) {
+                //     return wx.showModal({
+                //         title: '请求错误',
+                //         content: res.data.Msg,
+                //         showCancel: false
+                //     })
+                // }
+                console.log(res)
+                if (res.statusCode !== 200) {
                     return wx.showModal({
-                        title: '请求错误',
-                        content: res.data.msg,
+                        title: '网络错误',
+                        content: JSON.stringify(res),
                         showCancel: false
                     })
                 }

@@ -1,4 +1,5 @@
 // menzhen/priceInquiry/priceInquiry.js
+const { queryPrice } = require('../../utils/API')
 Page({
 
   /**
@@ -21,6 +22,12 @@ Page({
             title: '药品查询'
           })
       }
+      this.getList()
+  },
+  getList () {
+    queryPrice().then(ret => {
+        console.log(ret)
+    })
   },
   toDetail () {
       wx.navigateTo({
