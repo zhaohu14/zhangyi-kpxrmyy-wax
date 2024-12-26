@@ -1,5 +1,5 @@
 
-<card cardInfo="{{ cardInfo }}" showSwitch="{{ true }}" isDZJKK="{{ true }}">
+<card wx:if="{{ cardInfo }}" cardInfo="{{ cardInfo }}" showSwitch="{{ true }}" isDZJKK="{{ false }}">
     <view class="ewm">
         <view class="ewmContent" bind:tap="toCardDetail">
             <canvas class='myQrcode' canvas-id='myQrcode'></canvas>

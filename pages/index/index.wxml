@@ -7,11 +7,14 @@
             <input type="text" placeholder-class="c-placeholder" placeholder="请输入您要搜索的医生" />
             <view class="searchBtn">搜索</view>
         </view>
-        <view class="cardView">
+        <view class="cardView" wx:if="{{ !cardInfo }}">
             <view bind:tap="toAddCard" class="noCard" wx:if="{{ !cardInfo }}">
                 <view class="addCardView">绑定就诊卡/电子健康卡</view>
             </view>
             <image class="bgImage" src="../../static/health_card_template.png" mode=""/>
+        </view>
+        <view wx:if="{{ cardInfo }}" style="width: 80%;margin-left: 10%;">
+          <card cardInfo="{{ cardInfo }}" showSwitch="{{ false }}" isDZJKK="{{ false }}"></card>
         </view>
     </view>
 </view>

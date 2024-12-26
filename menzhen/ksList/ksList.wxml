@@ -17,14 +17,14 @@
     </view>
 </view>
 <view class="kzContent">
-    <view class="kzLeft">
+    <!-- <view class="kzLeft">
         <view class="{{ selectName === item.name ? 'leftContent y' : 'leftContent' }}" wx:for="{{ typeList }}" bind:tap="changeTypes" data-item="{{ item }}">
             <view>{{ item.name }}</view>
         </view>
-    </view>
+    </view> -->
     <view class="kzRight">
         <view class="rightContent" wx:for="{{ selectKzList }}" bind:tap="toPaiBan" data-subjects="{{ item }}">
-            {{ item.name }}
+            {{ item.DptName }}
         </view>
         <view class="rightContent" style="border: none;">
         </view>

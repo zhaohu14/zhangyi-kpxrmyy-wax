@@ -4,10 +4,14 @@ page {
 
 .doctorInfo {
     width: 95%;
-    min-height: 300rpx;
+    min-height: 200rpx;
     /* border: 1rpx solid #dbdbdb; */
     margin-left: 2.5%;
     padding-top: 20rpx;
+}
+.doctorInfo .doctorName {
+  width: 100%;
+  text-align: center;
 }
 .doctorInfo .images {
     width: 100%;

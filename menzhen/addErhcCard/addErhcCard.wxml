@@ -8,7 +8,7 @@
     bind:change="changeCode"
     data-code="name"
 />
-<van-field
+<!-- <van-field
     value="{{ idCardType }}"
     required
     readonly
@@ -18,13 +18,13 @@
     <van-button bind:tap="changShowPicker" data-type="idcard" data-list="idCardTypeList" slot="button" size="small" type="info">
       点击选择证件类型
     </van-button>
-</van-field>
+</van-field> -->
 <van-field
     value="{{ idCard }}"
     required
     clearable
-    label="证件号码"
-    placeholder="请输入证件号码"
+    label="身份证号"
+    placeholder="请输入身份证号"
     bind:click-icon="onClickIcon"
     bind:change="changeCode"
     data-code="idCard"
@@ -42,6 +42,30 @@
 </van-field>
 
 <van-field
+    value="{{ matrimony }}"
+    required
+    readonly
+    label="婚姻状态"
+    placeholder="请选择婚姻状态"
+>
+    <van-button bind:tap="changShowPicker" data-type="matrimony" data-list="matrimonyLsit" slot="button" size="small" type="info">
+      点击选择婚姻状态
+    </van-button>
+</van-field>
+
+<van-field
+    value="{{ job }}"
+    required
+    readonly
+    label="工作种类"
+    placeholder="请选择工作种类"
+>
+    <van-button bind:tap="changShowPicker" data-type="job" data-list="jobList" slot="button" size="small" type="info">
+      点击选择工作种类
+    </van-button>
+</van-field>
+
+<van-field
     value="{{ mobile }}"
     required
     clearable
@@ -50,6 +74,17 @@
     bind:click-icon="onClickIcon"
     bind:change="changeCode"
     data-code="mobile"
+/>
+
+<van-field
+    value="{{ address }}"
+    required
+    clearable
+    label="住址"
+    placeholder="请输入住址"
+    bind:click-icon="onClickIcon"
+    bind:change="changeCode"
+    data-code="address"
 />
 
 <view class="submitBtn">

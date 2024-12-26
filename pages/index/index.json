@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "card": "/compents/card/card"
   },
   "navigationBarTitleText": "柯坪县人民医院"
 }

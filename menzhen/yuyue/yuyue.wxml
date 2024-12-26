@@ -2,7 +2,8 @@
     <view class="images">
         <image src="../../static/icon/doctor.png" alt="" />
     </view>
-    <view class="remake">简介：皮肤科门诊。能够用科学或技术的手段来处理人类疾病，预防出生缺陷提高人口素质，治病救人改善病患人类生活质量，并以习研究医学</view>
+    <view class="doctorName">{{ allPaiBai.DrName }}</view>
+    <!-- <view class="remake">简介：皮肤科门诊。能够用科学或技术的手段来处理人类疾病，预防出生缺陷提高人口素质，治病救人改善病患人类生活质量，并以习研究医学</view> -->
 </view>
 
 <view class="selectDate">
@@ -16,10 +17,10 @@
 
 <view class="paibanRows" wx:for="{{ paibanList }}" bind:tap="paibanTap" data-item="{{ item }}">
     <view class="content">
-        <view class="paibanDate">{{ item.date }}</view>
+        <view class="paibanDate">{{ item.ScheDate }}</view>
         <view class="paibanBtom">
-            <view>{{ item.ampm + "（" + item.type + "）" }}</view>
-            <view>{{ '余' + item.hy + '号' }}</view>
+            <view>{{ item.SessionName + "（" + item.Price + '元' + "）" }}</view>
+            <view>{{ '余' + item.RemainNo + '号' }}</view>
         </view>
     </view>
     <image src="../../static/icon/right.png" mode="" />
@@ -30,17 +31,17 @@
         <view class="titles">预约详情</view>
         <view class="userInfo">
             <view>就诊人</view>
-            <view>6****************4|赵先生</view>
+            <view>{{ cardInfo.patIdShow }}|{{ cardInfo.NameShow }}</view>
             <image src="../../static/icon/right.png" mode="" />
         </view>
         <view class="yyInfo">
             <view class="yyRows">
                 <view>科室</view>
-                <view>皮肤科门诊</view>
+                <view>{{ allPaiBai.deptName }}</view>
             </view>
             <view class="yyRows">
                 <view>费用</view>
-                <view style="color: red;">4元</view>
+                <view style="color: red;">{{ selectPaiBan.Price }}元</view>
             </view>
             <view class="yyRows">
                 <view>就诊地点</view>
@@ -48,11 +49,11 @@
             </view>
             <view class="yyRows">
                 <view>就诊日期</view>
-                <view>2022-09-10</view>
+                <view>{{ selectPaiBan.ScheDate }}</view>
             </view>
             <view class="yyRows" bind:tap="showSelectTimes">
                 <view>就诊时间</view>
-                <view>{{ selectTime ? selectTime : '点击选择预约时间' }}</view>
+                <view>{{ selectTime ? selectTime.Seg : '点击选择预约时间' }}</view>
             </view>
         </view>
         <view class="btns">
@@ -71,7 +72,7 @@
                 <view class="selectView">
                     <image wx:if="{{ item.select }}" src="../../static/icon/select.png" mode=""/>
                 </view>
-                <view class="timeView">{{ item.time }}</view>
+                <view class="timeView">{{ item.Seg + '（' + item.Seq + '号' + '）' }}</view>
             </view>
         </view>
         <view class="timeBtns">

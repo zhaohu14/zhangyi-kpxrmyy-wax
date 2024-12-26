@@ -3,29 +3,29 @@
 
 <view class="yyContent">
     <view class="header">
-        <view>预约码：986532658923</view>
-        <view>待就诊</view>
+        <view>预约码：{{ info.RegId }}</view>
+        <view></view>
     </view>
     <view class="barCode">
         <canvas id="barCode" canvas-id="barCode"/>
     </view>
-    <view class="numberView">65626461463103</view>
+    <view class="numberView">{{ info.RegId }}</view>
     <view class="cellView">
         <view class="cell">
             <view>科室</view>
-            <view>心内科</view>
+            <view>{{ info.Dpt }}</view>
         </view>
         <view class="cell">
             <view>医生</view>
-            <view>李医生</view>
+            <view>{{ info.Dr }}</view>
         </view>
         <view class="cell">
             <view>就诊日期</view>
-            <view>2024-08-29 下午</view>
+            <view>{{ info.Time }}</view>
         </view>
         <view class="cell">
             <view>患者姓名</view>
-            <view>李二</view>
+            <view>{{ cardInfo.Name }}</view>
         </view>
         <view class="cell">
             <view>就诊医院</view>
@@ -33,7 +33,7 @@
         </view>
         <view class="cell">
             <view>挂号费用</view>
-            <view>4元</view>
+            <view>{{ info.Amt }}元</view>
         </view>
     </view>
 </view>

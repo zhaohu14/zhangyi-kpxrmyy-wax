@@ -34,5 +34,6 @@ Component({
         },
     },
     created () {
+      console.log(this.cardInfo)
     },
 })

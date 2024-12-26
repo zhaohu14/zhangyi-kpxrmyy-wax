@@ -1,20 +1,46 @@
 // menzhen/yuyueList/yuyueList.js
+const {
+  getReged
+} = require('../../utils/API')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      cardInfo: getApp().globalData.cardInfo
+    })
+    this.getList()
   },
-  toyyjfDetail () {
+  getList () {
+    getReged({
+      PatId: this.data.cardInfo.PatId,
+      OpenId: getApp().globalData.OpenId
+    }).then(ret => {
+      if (ret.Code !== 1) {
+        return wx.showModal({
+          title: '请求错误',
+          content: ret.Msg,
+          showCancel: false
+        })
+      }
+      this.setData({
+        list: ret.Data.Regs
+      })
+    })
+  },
+  toyyjfDetail (e) {
+    // console.log(e.currentTarget.dataset.item)
+    wx.setStorageSync('yuyueHistoryRows', e.currentTarget.dataset.item)
+    // return
       wx.navigateTo({
         url: '/menzhen/yuyueDetail/yuyueDetail',
       })

@@ -2,8 +2,8 @@
     <view class="jzCardView cardView">
         <view class="cardViewContent">
             <view class="hasCard">
-                <view class="cardName">{{ cardInfo.name }}</view>
-                <view class="cardNo">就诊卡：{{ cardInfo.idCardNo }}</view>
+                <view class="cardName">{{ cardInfo.Name }}</view>
+                <view class="cardNo">就诊卡：{{ cardInfo.PatId }}</view>
             </view>
             <slot></slot>
         </view>

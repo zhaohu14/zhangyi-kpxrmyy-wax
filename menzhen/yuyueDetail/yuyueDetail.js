@@ -14,7 +14,12 @@ Page({
    */
   onLoad(options) {
       console.log(barcode)
-      barcode.code128(wx.createCanvasContext('barCode'), '65626461463103', 340, 80)
+      this.setData({
+        info: wx.getStorageSync('yuyueHistoryRows'),
+        cardInfo: getApp().globalData.cardInfo
+      })
+      wx.removeStorageSync('yuyueHistoryRows')
+      barcode.code128(wx.createCanvasContext('barCode'), this.data.info.RegId, 340, 80)
   },
 
   /**

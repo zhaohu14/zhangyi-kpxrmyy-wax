@@ -181,15 +181,23 @@ Page({
         wx.setNavigationBarTitle({
             title: title
         })
-        this.setData({
-            selectKzList: this.data.typeList[0].children
-        })
+        // this.setData({
+        //     selectKzList: this.data.typeList[0].children
+        // })
         this.getList()
     },
     getList() {
         queryDpt().then(ret => {
+          if (ret.Code !== 1) {
+            return wx.showModal({
+              title: '请求错误',
+              content: ret.Msg,
+              showCancel: false
+            })
+          }
             this.setData({
-                list: ret.list
+                list: ret.Data.Dpts,
+                selectKzList: ret.Data.Dpts
             })
         })
     },
@@ -197,7 +205,7 @@ Page({
         //   console.log(e)
         const subjects = e.currentTarget.dataset.subjects
         wx.navigateTo({
-            url: '/menzhen/paiban/paiban?name=' + subjects.name
+            url: '/menzhen/paiban/paiban?name=' + subjects.DptName + '&DptId=' + subjects.DptId
         })
     },
     changeTypes (e) {
