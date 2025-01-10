@@ -2,7 +2,8 @@
 <card wx:if="{{ cardInfo }}" cardInfo="{{ cardInfo }}" showSwitch="{{ true }}" isDZJKK="{{ false }}">
     <view class="ewm">
         <view class="ewmContent" bind:tap="toCardDetail">
-            <canvas class='myQrcode' canvas-id='myQrcode'></canvas>
+            <!-- <canvas class='myQrcode' canvas-id='myQrcode'></canvas> -->
+            <image class="ewmView" src="../../static/ewm.png" mode=""/>
         </view>
         <view class="title">就诊卡二维码</view>
 
@@ -16,7 +17,7 @@
 </view>
 <view class="meRows bottom">
     <image class="images" src="../../static/me/jfjl.png" mode="" />
-    <view class="title">缴费记录</view>
+    <view class="title" bind:tap="toJfjl">缴费记录</view>
     <image class="r" src="../../static/me/right.png" mode="" />
 </view>
 <view class="meRows" bind:tap="toCardList">

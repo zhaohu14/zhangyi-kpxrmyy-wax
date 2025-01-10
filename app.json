@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/showBody/showBody"
   ],
   "subPackages": [
     {
@@ -28,7 +29,8 @@
         "mzAwait/mzAwait",
         "yuyueList/yuyueList",
         "hospitalDetail/hospitalDetail",
-        "hospitalJS/hospitalJS"
+        "hospitalJS/hospitalJS",
+        "addZyNo/addZyNo"
       ]
     },
     {
@@ -36,7 +38,8 @@
       "name": "zhuyuan",
       "pages": [
         "fee/fee",
-        "feeDetail/feeDetail"
+        "feeDetail/feeDetail",
+        "checkList/checkList"
       ]
     }
   ],

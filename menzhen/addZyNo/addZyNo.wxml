@@ -1,0 +1,14 @@
+<userCard wx:if="{{ cardInfo }}" cardInfo="{{ cardInfo }}" bind:swichSuccess="swichSuccess"></userCard>
+<van-field
+    value="{{ zhuyuanNo }}"
+    required
+    clearable
+    label="住院号"
+    placeholder="请输入住院号"
+    bind:click-icon="onClickIcon"
+    bind:change="change"
+/>
+
+<view class="submitBtn">
+    <van-button type="info" bind:tap="getInfo">绑定住院号</van-button>
+</view>

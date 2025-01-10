@@ -9,7 +9,8 @@ App({
     BASE_URL: 'https://kpxrmyy.sunyotas.com',
     token: null,
     OpenId: null,
-    cardList: []
+    cardList: [],
+    zyInfo: null
   },
   onLaunch() {
     // 展示本地存储能力
@@ -41,8 +42,9 @@ App({
             })
           }
           getApp().globalData.OpenId = ret.Data.OpenId
-          getApp().globalData.cardInfo = ret.Data.Users[0]
+          getApp().globalData.cardInfo = ret.Data.Users.length > 0 ? ret.Data.Users[0] : null
           getApp().globalData.cardList = ret.Data.Users
+          getApp().globalData.zyInfo = null
           if (that) {
             that.setData({
               cardInfo: getApp().globalData.cardInfo

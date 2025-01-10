@@ -5,14 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    item: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      item: wx.getStorageSync('priceItem')
+    })
+    wx.removeStorageSync('priceItem')
   },
 
   /**

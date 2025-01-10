@@ -56,6 +56,9 @@ page {
   justify-content: center;
   align-items: center;
 }
+.input .inputView .titles {
+  font-size: 30rpx;
+}
 
 .input .inputView .iptview {
   width: 75%;

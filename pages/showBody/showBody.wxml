@@ -1,0 +1,4 @@
+<!--pages/showBody/showBody.wxml-->
+<view class="rows" wx:for="{{ bodyContent }}">
+  <rich-text nodes="{{ item.BodyContent }}"/>
+</view>

@@ -1,8 +1,8 @@
-<view class="cardInfo">
+<!-- <view class="cardInfo">
     <view class="name">当前就诊人：赵虎</view>
     <view class="qh">点击切换</view>
     <image src="../../static/icon/right.png" mode="" />
-</view>
+</view> -->
 
 
 <!-- <view class="selectDate">

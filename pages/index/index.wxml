@@ -1,12 +1,12 @@
 <view class="headers">
     <view class="backgroundView">
-        <view class="headerSearch">
+        <!-- <view class="headerSearch">
             <view class="images">
                 <image src="../../static/search.png" mode="" />
             </view>
             <input type="text" placeholder-class="c-placeholder" placeholder="请输入您要搜索的医生" />
             <view class="searchBtn">搜索</view>
-        </view>
+        </view> -->
         <view class="cardView" wx:if="{{ !cardInfo }}">
             <view bind:tap="toAddCard" class="noCard" wx:if="{{ !cardInfo }}">
                 <view class="addCardView">绑定就诊卡/电子健康卡</view>
@@ -14,7 +14,16 @@
             <image class="bgImage" src="../../static/health_card_template.png" mode=""/>
         </view>
         <view wx:if="{{ cardInfo }}" style="width: 80%;margin-left: 10%;">
-          <card cardInfo="{{ cardInfo }}" showSwitch="{{ false }}" isDZJKK="{{ false }}"></card>
+          <card cardInfo="{{ cardInfo }}" showSwitch="{{ false }}" isDZJKK="{{ false }}">
+            <view class="ewm">
+        <view class="ewmContent" bind:tap="toCardDetail">
+            <!-- <canvas class='myQrcode' canvas-id='myQrcode'></canvas> -->
+            <image class="ewmView" src="../../static/ewm.png" mode=""/>
+        </view>
+        <view class="title">查看详情</view>
+
+    </view>
+          </card>
         </view>
     </view>
 </view>
@@ -79,7 +88,7 @@
             </view>
         </view>
     </van-tab>
-    <van-tab title="排队候诊">
+    <!-- <van-tab title="排队候诊">
         <view class="tabsView">
             <view class="tabsView">
                 <view class="tabsView">
@@ -94,7 +103,7 @@
                 </view>
             </view>
         </view>
-    </van-tab>
+    </van-tab> -->
 </van-tabs>
 
 <view class="bottomfuncView">

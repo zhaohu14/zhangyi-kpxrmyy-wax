@@ -1,0 +1,49 @@
+<!--zhuyuan/fee/fee.wxml-->
+<!-- <view class="header">
+    <view class="headerContent">
+        <view class="left">当前就诊人：赵虎</view>
+        <image class="cardImg" src="../../static/icon/card.png" mode=""/>
+        <image src="../../static/icon/right.png" mode=""/>
+    </view>
+</view> -->
+<userCard cardInfo="{{ cardInfo }}" bind:swichSuccess="swichSuccess"></userCard>
+<zyUserCard wx:if="{{ showZy }}" cardInfo="{{ cardInfo }}"></zyUserCard>
+<view class="selectTime">
+    <view class="selectTimeContent">
+        <view class="title">点击选择日期</view>
+        <view class="time">
+            <picker mode="date" bindchange="changeTime" data-type="startTime" end="{{ endTime }}">
+                {{ startTime ? startTime : '不限' }}
+            </picker>
+        </view>
+        <!-- <view class="title">至</view>
+        <view class="time">
+            <picker mode="date" bindchange="changeTime" data-type="endTime" start="{{ startTime }}">
+                {{ endTime ? endTime : '不限' }} 
+            </picker>
+        </view>
+        <view class="title">结束时间</view> -->
+    </view>
+</view>
+
+<view class="rows" wx:for="{{ list }}">
+    <!-- <view class="titles">
+        <view>时间：2022-03-25</view>
+        <view bind:tap="toDetail">查看详情</view>
+    </view> -->
+    <view class="content">
+        <!-- <van-cell border="false" title="一次性注射液" value="5元"></van-cell> -->
+        <view class="children">
+            <view>项目名称</view>
+            <view>{{ item.Item }}</view>
+        </view>
+        <view class="children">
+            <view>项目单价</view>
+            <view>{{ item.Price }}元</view>
+        </view>
+        <view class="children">
+            <view>项目规格</view>
+            <view>{{ item.Spec }}</view>
+        </view>
+    </view>
+</view>

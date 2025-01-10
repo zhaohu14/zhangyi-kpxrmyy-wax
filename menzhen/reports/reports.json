@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "userCard": "../../compents/userCard/userCard"
+  },
   "navigationBarTitleText": "报告查看"
 }

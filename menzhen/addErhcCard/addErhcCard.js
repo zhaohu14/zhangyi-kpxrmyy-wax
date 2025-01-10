@@ -3,7 +3,8 @@ const {
   getInfoFromId,
   nationList,
   matrimonyLsit,
-  jobList
+  jobList,
+  relList
 } = require('../../utils/util')
 const {
   bindUser
@@ -47,7 +48,10 @@ Page({
     pickerList: [],
     address: '',
     job: '',
-    jobCode: ''
+    jobCode: '',
+    relList: [],
+    rel: '',
+    relCode: ''
   },
 
   /**
@@ -63,7 +67,8 @@ Page({
         }
       }),
       matrimonyLsit: matrimonyLsit,
-      jobList: jobList
+      jobList: jobList,
+      relList: relList
     })
   },
   changeCode(e) {
@@ -102,12 +107,21 @@ Page({
     if (this.data.pickerType === 'job') {
       this.jobChange(e.detail.value)
     }
+    if (this.data.pickerType === 'rel') {
+      this.relChange(e.detail.value)
+    }
     this.pickerCancel()
   },
   jobChange (e) {
     this.setData({
       job: e.value,
       jobCode: e.code
+    })
+  },
+  relChange (e) {
+    this.setData({
+      rel: e.value,
+      relCode: e.code
     })
   },
   matrimonyChange(e) {
@@ -167,6 +181,12 @@ Page({
         icon: 'none'
       })
     }
+    if (!this.data.rel.length) {
+      return wx.showToast({
+        title: '请选择关系',
+        icon: 'none'
+      })
+    }
     if (!this.data.address.length) {
       return wx.showToast({
         title: '请填写住址',
@@ -175,7 +195,7 @@ Page({
     }
     let obj = {
       "OpenId": getApp().globalData.OpenId,
-      "Rel": 0,
+      "Rel": this.data.relCode,
       "Name": this.data.name,
       "EnName": "",
       "Gender": getInfoFromId(this.data.idCard).sex === '男' ? '0' : '1',
@@ -200,7 +220,17 @@ Page({
           showCancel: false
         })
       }
-      wx.navigateBack()
+      // wx.navigateBack()
+      getApp().globalData.login()
+      setTimeout(() => {
+        wx.showToast({
+          title: '绑定成功',
+          icon: 'none'
+        })
+        wx.switchTab({
+          url: '/pages/index/index',
+        })
+      }, 1000)
     })
   },
   /**

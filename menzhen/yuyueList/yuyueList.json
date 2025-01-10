@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-cell": "@vant/weapp/cell/index"
+    "van-cell": "@vant/weapp/cell/index",
+    "userCard": "../../compents/userCard/userCard"
   },
   "navigationBarTitleText": "预约记录"
 }

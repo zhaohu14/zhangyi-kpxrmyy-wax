@@ -1,26 +1,51 @@
 // menzhen/cardDetail/cardDetail.js
 import drawQrcode from '../../utils/qrcode'
+const {
+  unbindUser,
+  getQrCode
+} = require('../../utils/API')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      showEwm: false
+      showEwm: false,
+      cardInfo: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-      this.creatEWM('654225199806182514')
+      this.setData({
+        cardInfo: wx.getStorageSync('cardInfo')
+      })
+      wx.removeStorageSync('cardInfo')
+      this.getCode()
+      // this.creatEWM(this.data.cardInfo.PatId)
+  },
+  getCode () {
+    getQrCode({
+      OpenId: getApp().globalData.OpenId,
+      PatId: this.data.cardInfo.PatId
+    }).then(ret => {
+      if (ret.Code !== 1) {
+        return wx.showModal({
+          title: '请求错误',
+          content: ret.Msg,
+          showCancel: false
+        })
+      }
+      this.creatEWM(ret.Data.QrCode) 
+    })
   },
   creatEWM (value) {
     this.setData({
         showEwm: false
     })
     drawQrcode({
-        width: 204,
+        width: 200,
         height: 204,
         canvasId: 'myQrcode',
         text: value,
@@ -40,6 +65,35 @@ Page({
   changeEwm () {
       console.log(1)
       this.creatEWM('123456')
+  },
+  removeCard () {
+    wx.showModal({
+      title: '温馨提示',
+      content: '是否解绑该就诊卡',
+      confirmText: '解绑',
+      success: res => {
+        if (res.confirm) {
+          this.startRemove()
+        }
+      }
+    })
+  },
+  startRemove () {
+    unbindUser({
+      OpenId: getApp().globalData.OpenId,
+      PatId: this.data.cardInfo.PatId
+    }).then(ret => {
+      if (ret.Code  !== 1) {
+        return wx.showModal({
+          title: '请求错误',
+          content: ret.Msg,
+          showCancel: false
+        })
+      }
+      wx.switchTab({
+        url: '/pages/index/index'
+      })
+    })
   },
 
   /**

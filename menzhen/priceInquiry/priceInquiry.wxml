@@ -1,10 +1,14 @@
 <!--menzhen/priceInquiry/priceInquiry.wxml-->
 <van-search
-  value="{{ value }}"
+  value="{{ KeyWords }}"
   shape="round"
   background="#4C87FD"
   placeholder="请输入搜索关键词"
   use-action-slot
+  bind:change="changeKey"
 >
 </van-search>
-<van-cell wx:for="{{ 15 }}" title="阿莫西林" is-link bind:tap="toDetail"/>
+<scroll-view class="scrollView" scroll-y="true" bindscrolltolower="addList">
+  <van-cell wx:for="{{ list }}" title="{{ item.N }}" is-link bind:tap="toDetail" data-item ="{{ item }}"/>
+  <view class="tips" wx:if="{{ list.length === 0 }}">暂无数据，试试其他关键词</view>
+</scroll-view>

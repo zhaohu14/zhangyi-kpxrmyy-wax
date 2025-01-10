@@ -15,12 +15,12 @@ Page({
       //     url: '/menzhen/ksList/ksList',
       //     id: 3
       // },
-      {
-        title: '一卡通充值',
-        icon: '../../static/home/11.png',
-        url: '/menzhen/recharge/recharge',
-        id: 11
-      },
+      // {
+      //   title: '一卡通充值',
+      //   icon: '../../static/home/11.png',
+      //   url: '/menzhen/recharge/recharge',
+      //   id: 11
+      // },
       {
         title: '药品查询',
         icon: '../../static/home/12.png',
@@ -36,55 +36,56 @@ Page({
         noLogin: true
       },
       {
-        title: '充值记录',
+        title: '缴费记录',
         icon: '../../static/home/14.png',
         url: '/menzhen/paymentRecord/paymentRecord',
         id: 14
       },
-      {
-        title: '电子发票开具',
-        icon: '../../static/home/15.png',
-        url: '',
-        id: 15
-      },
-      {
-        title: '电子发票查询',
-        icon: '../../static/home/16.png',
-        url: '/menzhen/invoiceList/invoiceList?type=mz',
-        id: 16
-      },
+      // {
+      //   title: '电子发票开具',
+      //   icon: '../../static/home/15.png',
+      //   url: '',
+      //   id: 15
+      // },
+      // {
+      //   title: '电子发票查询',
+      //   icon: '../../static/home/16.png',
+      //   url: '/menzhen/invoiceList/invoiceList?type=mz',
+      //   id: 16
+      // },
 
     ],
-    zyList: [{
-        title: '住院费用\n预缴',
-        icon: '../../static/home/21.png',
-        url: '/menzhen/recharge/recharge?type=zy',
-        id: 21
-      },
+    zyList: [
+      // {
+      //   title: '住院费用\n预缴',
+      //   icon: '../../static/home/21.png',
+      //   url: '/menzhen/recharge/recharge?type=zy',
+      //   id: 21
+      // },
       {
         title: '住院一日\n清单查询',
         icon: '../../static/home/22.png',
         url: '/zhuyuan/fee/fee',
         id: 22
       },
-      {
-        title: '住院账单\n查询',
-        icon: '../../static/home/23.png',
-        url: '',
-        id: 23
-      },
-      {
-        title: '住院缴费\n记录查询',
-        icon: '../../static/home/24.png',
-        url: '',
-        id: 24
-      },
-      {
-        title: '住院结算\n电子发票',
-        icon: '../../static/home/25.png',
-        url: '/menzhen/invoiceList/invoiceList?type=zy',
-        id: 25
-      }
+      // {
+      //   title: '住院账单\n查询',
+      //   icon: '../../static/home/23.png',
+      //   url: '/zhuyuan/checkList/checkList',
+      //   id: 23
+      // },
+      // {
+      //   title: '住院缴费\n记录查询',
+      //   icon: '../../static/home/24.png',
+      //   url: '',
+      //   id: 24
+      // },
+      // {
+      //   title: '住院结算\n电子发票',
+      //   icon: '../../static/home/25.png',
+      //   url: '/menzhen/invoiceList/invoiceList?type=zy',
+      //   id: 25
+      // }
     ],
     pdhzList: [{
         title: '门诊候诊',
@@ -103,6 +104,15 @@ Page({
   },
   onLoad() {
 
+  },
+  toCardDetail() {
+    wx.setStorageSync('cardInfo', this.data.cardInfo)
+    wx.navigateTo({
+        url: '/menzhen/cardDetail/cardDetail',
+    })
+    // wx.navigateTo({
+    //   url: '/menzhen/cardDetail/cardDetail',
+    // })
   },
   onShow() {
     // this.setData({

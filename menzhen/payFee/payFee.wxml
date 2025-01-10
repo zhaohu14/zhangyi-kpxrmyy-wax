@@ -1,10 +1,11 @@
-<view class="header">
+<!-- <view class="header">
     <view class="headerContent">
         <view class="left">当前就诊人：赵虎</view>
         <image class="cardImg" src="../../static/icon/card.png" mode=""/>
         <image src="../../static/icon/right.png" mode=""/>
     </view>
-</view>
+</view> -->
+<userCard cardInfo="{{ cardInfo }}" bind:swichSuccess="swichSuccess"></userCard>
 <view class="selectTime">
     <view class="selectTimeContent">
         <view class="title">开始时间</view>
@@ -30,19 +31,19 @@
 
 <view class="listView" wx:if="{{ selectListType === '0' }}">
     <view class="listRows" wx:for="{{ payFeeList }}">
-        <view class="title" bind:tap="changeSelect" data-index="{{ index }}">
+        <!-- <view class="title" bind:tap="changeSelect" data-index="{{ index }}">
             <image src="{{ item.select ? '../../static/icon/selectY.png' : '../../static/icon/selectN.png' }}" mode=""/>
             <view>{{ item.itemName }}</view>
-        </view>
-        <view class="listContent" bind:tap="toPayFeeDetail">
+        </view> -->
+        <view class="listContent" bind:tap="toPayFeeDetail" data-item="{{ item }}">
             <view class="rowsDetail">
                 <view class="detailRows">
                     <view>科室：</view>
-                    <view>{{ item.dept }}</view>
+                    <view>{{ item.Dpt }}</view>
                 </view>
                 <view class="detailRows">
                     <view>医生：</view>
-                    <view>{{ item.doctor }}</view>
+                    <view>{{ item.Dr }}</view>
                 </view>
                 <view class="detailRows">
                     <view>总金额：</view>
@@ -50,12 +51,13 @@
                 </view>
                 <view class="detailRows">
                     <view>开单时间：</view>
-                    <view>{{ item.time }}</view>
+                    <view>{{ item.Time }}</view>
                 </view>
             </view>
             <image src="../../static/icon/right.png" mode=""/>
         </view>
     </view>
+    <view wx:if="{{ payFeeList.length === 0 }}" style="width: 100%;height: 300rpx;text-align: center;line-height: 300rpx;font-size: 38rpx;font-weight: 600;color: #7e7e7e;">暂无数据</view>
 
 </view>
 
@@ -89,7 +91,7 @@
 
 </view>
 
-<view class="bottomView" wx:if="{{ selectListType === '0' }}">
+<!-- <view class="bottomView" wx:if="{{ selectListType === '0' }}">
     <view class="bottomLeft">
         <image bind:tap="changAll" src="{{ selectAll ? '../../static/icon/selectY.png' : '../../static/icon/selectN.png' }}" mode=""/>
         <view class="all">全选</view>
@@ -100,4 +102,4 @@
         </view>
     </view>
     <view class="toPayView" bind:tap="toPayFeeDetail">去支付</view>
-</view>
+</view> -->

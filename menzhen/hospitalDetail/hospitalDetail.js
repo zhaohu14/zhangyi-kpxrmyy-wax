@@ -1,4 +1,7 @@
 // menzhen/hospitalDetail/hospitalDetail.js
+const {
+  queryInfo
+} = require('../../utils/API')
 Page({
 
   /**
@@ -12,7 +15,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.getYyInfo()
+  },
+  getYyInfo () {
+    queryInfo({
+      QueryType: '3'
+    }).then(ret => {
+      if (ret.Code !== 1) {
+        return wx.showModal({
+          title: '请求错误',
+          content: ret.Msg,
+          showCancel: false
+        })
+      }
+    })
+  },
+  toBody (e) {
+    console.log(e.currentTarget.dataset.id)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/showBody/showBody?id=' + id,
+    })
   },
   startPhone () {
       wx.makePhoneCall({

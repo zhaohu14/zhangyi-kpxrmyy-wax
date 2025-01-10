@@ -1,0 +1,5 @@
+/* pages/showBody/showBody.wxss */
+.rows {
+  width: 95%;
+  margin-left: 2.5%;
+}

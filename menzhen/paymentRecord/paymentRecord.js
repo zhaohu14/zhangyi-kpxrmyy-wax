@@ -1,4 +1,7 @@
 // menzhen/paymentRecord/paymentRecord.js
+const {
+  queryPayHistory
+} = require('../../utils/API')
 Page({
 
   /**
@@ -7,13 +10,56 @@ Page({
   data: {
     startTime: null,
     endTime: null,
+    cardInfo: null,
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      cardInfo: getApp().globalData.cardInfo
+    })
+    this.getList()
+  },
+  getList () {
+    this.setData({
+      list: []
+    })
+    queryPayHistory({
+      OpenId: getApp().globalData.OpenId,
+      PatId: this.data.cardInfo.PatId
+    }).then(ret => {
+      if (ret.Code !== 1) {
+        wx.showModal({
+          title: '请求错误',
+          content: ret.Msg,
+          showCancel: false
+        })
+      }
+      let arr = []
+      ret.Data.Pays.forEach(res => {
+        res.Dtls.forEach(e => {
+          e.Dpt = res.Dpt
+          e.Dr = res.Dr
+          e.Time = res.Time
+          e.totalAmount = Number(e.Prc) * Number(e.Qty)
+          arr.push(e)
+        })
+      })
+      this.setData({
+        list: arr
+      })
+    })
+  },
+  swichSuccess(e) {
+    console.log(e)
+    this.setData({
+      cardInfo: e.detail
+    })
+    getApp().globalData.cardInfo = e.detail
+    this.getList()
   },
 
   /**

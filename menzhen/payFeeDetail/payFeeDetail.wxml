@@ -1,23 +1,23 @@
 <view class="header">
     <view class="title">支付金额</view>
     <view class="totalMoney">
-        ￥100.00元
+        ￥{{ payIngItem.totalMoney }}元
     </view>
     <view class="userInfoRows">
         <view>患者姓名</view>
-        <view>赵虎</view>
+        <view>{{ cardInfo.Name }}</view>
     </view>
     <view class="userInfoRows">
         <view>门诊类别</view>
-        <view>耳鼻喉头颈外科普通门诊</view>
+        <view>{{ payIngItem.Dpt }}</view>
     </view>
     <view class="userInfoRows">
         <view>医生姓名</view>
-        <view>李医生</view>
+        <view>{{ payIngItem.Dr }}</view>
     </view>
     <view class="userInfoRows">
         <view>就诊时间</view>
-        <view>2024-09-19 14:22</view>
+        <view>{{ payIngItem.Time }}</view>
     </view>
 </view>
 
@@ -40,13 +40,13 @@
 
     <view class="detailRows" wx:for="{{ detailList }}">
         <view class="rows">
-            <view>{{ item.name }}</view>
+            <view>{{ item.Name }}</view>
         </view>
         <view class="rows">
-            <view>{{ item.num }}</view>
+            <view>{{ item.Qty + item.Unit }}</view>
         </view>
         <view class="rows" style="color: red;">
-            <view>{{ item.price }}</view>
+            <view>{{ item.Prc + '元' }}</view>
         </view>
         <view class="rows">
             <view>{{ item.totalAmount }}</view>
@@ -60,5 +60,5 @@
 </view> -->
 <view class="btns">
     <view bind:tap="toYB">医保支付</view>
-    <view>自费支付</view>
+    <view bind:tap="payStart">自费支付</view>
 </view>

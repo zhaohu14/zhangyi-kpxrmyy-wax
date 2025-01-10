@@ -1,1 +1,14 @@
 /* menzhen/priceInquiry/priceInquiry.wxss */
+.scrollView {
+  width: 100%;
+  height: 80vh;
+  /* background-color: #dbdbdb; */
+}
+.tips {
+  width: 100%;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  color: #7e7e7e;
+  font-weight: 600;
+}

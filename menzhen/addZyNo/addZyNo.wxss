@@ -1,0 +1,8 @@
+/* menzhen/addZyNo/addZyNo.wxss */
+page {
+  padding-top: 20rpx;
+}
+.submitBtn {
+  text-align: center;
+  margin-top: 40rpx;
+}

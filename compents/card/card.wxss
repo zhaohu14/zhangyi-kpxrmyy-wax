@@ -88,8 +88,9 @@
 
 
 .cardView .hasCard {
-    margin-left: 60rpx;
-    color: #fff;
+    margin-left: 18rpx;
+    color: #000;
+    margin-top: 150rpx;
 }
 
 .dzjkk .cardView .hasCard {
@@ -108,8 +109,8 @@
 .cardView .hasCard .cardNo {
     height: 30rpx;
     line-height: 30rpx;
-    font-size: 30rpx;
-    color: #D9E8FF;
+    font-size: 28rpx;
+    color: #000;
 }
 
 .dzjkk .cardView .hasCard .cardNo {

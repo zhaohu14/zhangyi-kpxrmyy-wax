@@ -21,6 +21,9 @@ Page({
     this.getList()
   },
   getList () {
+    this.setData({
+      list: []
+    })
     getReged({
       PatId: this.data.cardInfo.PatId,
       OpenId: getApp().globalData.OpenId
@@ -29,13 +32,24 @@ Page({
         return wx.showModal({
           title: '请求错误',
           content: ret.Msg,
-          showCancel: false
+          showCancel: false,
+          success: () => {
+            // wx.navigateBack()
+          }
         })
       }
       this.setData({
         list: ret.Data.Regs
       })
     })
+  },
+  swichSuccess(e) {
+    console.log(e.detail)
+    getApp().globalData.cardInfo = e.detail
+    this.setData({
+      cardInfo: e.detail
+    })
+    this.getList()
   },
   toyyjfDetail (e) {
     // console.log(e.currentTarget.dataset.item)

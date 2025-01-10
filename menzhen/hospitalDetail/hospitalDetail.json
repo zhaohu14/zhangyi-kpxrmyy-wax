@@ -3,5 +3,5 @@
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index"
   },
-  "navigationBarTitleText": "柯坪县人民医院"
+  "navigationBarTitleText": "医院详情"
 }

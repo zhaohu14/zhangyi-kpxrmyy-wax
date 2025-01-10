@@ -1,39 +1,54 @@
 <!--zhuyuan/fee/fee.wxml-->
-<view class="header">
+<!-- <view class="header">
     <view class="headerContent">
         <view class="left">当前就诊人：赵虎</view>
         <image class="cardImg" src="../../static/icon/card.png" mode=""/>
         <image src="../../static/icon/right.png" mode=""/>
     </view>
-</view>
+</view> -->
+<userCard cardInfo="{{ cardInfo }}" bind:swichSuccess="swichSuccess"></userCard>
+<zyUserCard wx:if="{{ showZy }}" cardInfo="{{ cardInfo }}"></zyUserCard>
 <view class="selectTime">
     <view class="selectTimeContent">
-        <view class="title">开始时间</view>
+        <view class="title">点击选择日期</view>
         <view class="time">
             <picker mode="date" bindchange="changeTime" data-type="startTime" end="{{ endTime }}">
                 {{ startTime ? startTime : '不限' }}
             </picker>
         </view>
-        <view class="title">至</view>
+        <!-- <view class="title">至</view>
         <view class="time">
             <picker mode="date" bindchange="changeTime" data-type="endTime" start="{{ startTime }}">
                 {{ endTime ? endTime : '不限' }} 
             </picker>
         </view>
-        <view class="title">结束时间</view>
+        <view class="title">结束时间</view> -->
     </view>
 </view>
 
-<view class="rows" wx:for="{{ 5 }}">
-    <view class="titles">
+<view class="rows" wx:for="{{ list }}">
+    <!-- <view class="titles">
         <view>时间：2022-03-25</view>
         <view bind:tap="toDetail">查看详情</view>
-    </view>
+    </view> -->
     <view class="content">
         <!-- <van-cell border="false" title="一次性注射液" value="5元"></van-cell> -->
-        <view class="children" wx:for="{{ 4 }}">
-            <view>一次性注射液</view>
-            <view>15元</view>
+        <view class="children">
+            <view>项目名称</view>
+            <view>{{ item.Item }}</view>
+        </view>
+        <view class="children">
+            <view>项目单价</view>
+            <view>{{ item.Price }}元</view>
+        </view>
+        <view class="children">
+            <view>项目数量</view>
+            <view>{{ item.Qty }}元</view>
+        </view>
+        <view class="children">
+            <view>项目规格</view>
+            <view>{{ item.Spec ? item.Spec : '' }}</view>
         </view>
     </view>
 </view>
+<view wx:if="{{ list.length === 0 }}" style="width: 100%;height: 300rpx;text-align: center;line-height: 300rpx;font-size: 38rpx;font-weight: 600;color: #7e7e7e;">暂无数据</view>

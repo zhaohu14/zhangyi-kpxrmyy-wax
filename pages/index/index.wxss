@@ -1,360 +1,409 @@
 page {
-    background-color: rgb(236, 243, 247);
+  background-color: rgb(236, 243, 247);
 }
+
 .headers {
-    width: 100%;
-    height: 440rpx;
-    /* background-color: #4c87fd; */
-    /* border-bottom-left-radius: 120rpx;
+  width: 100%;
+  height: 440rpx;
+  /* background-color: #4c87fd; */
+  /* border-bottom-left-radius: 120rpx;
     border-bottom-right-radius: 120rpx; */
-    overflow: hidden;
-    position: relative;
-    background-color: #fff;
-    padding-bottom: 20rpx;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  padding-bottom: 20rpx;
 }
 
 .headers .backgroundView {
-    width: 120%;
-    background-color: #4c87fd;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    height: 80%;
-    position: absolute;
-    left: -10%;
+  width: 120%;
+  background-color: #4c87fd;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 80%;
+  position: absolute;
+  left: -10%;
 }
 
 .headers .backgroundView .headerSearch {
-    width: 80%;
-    height: 80rpx;
-    margin-left: 10%;
-    background-color: #709ffe;
-    border-radius: 40rpx;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 80%;
+  height: 80rpx;
+  margin-left: 10%;
+  background-color: #709ffe;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .headers .backgroundView .headerSearch .images {
-    width: 40rpx;
-    height: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
+
 .headers .backgroundView .headerSearch .images image {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .headerSearch input {
-    width: 60%;
-    color: #fff;
-    font-size: 30rpx;
-    margin-left: 20rpx;
+  width: 60%;
+  color: #fff;
+  font-size: 30rpx;
+  margin-left: 20rpx;
 }
+
 .c-placeholder {
-    color: #fff;
+  color: #fff;
 }
 
 .headerSearch .searchBtn {
-    padding-left: 20rpx;
-    height: 40rpx;
-    line-height: 40rpx;
-    border-left: 1rpx solid #fff;
-    color: #fff;
-    font-size: 30rpx;
+  padding-left: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-left: 1rpx solid #fff;
+  color: #fff;
+  font-size: 30rpx;
 }
 
 .backgroundView .cardView {
-    width: 80%;
-    height: 360rpx;
-    margin-left: 10%;
-    margin-top: 20rpx;
-    /* background-color: #dbdbdb; */
-    border-radius: 20rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 80%;
+  height: 360rpx;
+  margin-left: 10%;
+  margin-top: 20rpx;
+  /* background-color: #dbdbdb; */
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
+
 .backgroundView .cardView .bgImage {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-.backgroundView .cardView .noCard{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 20rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    top: 0;
+.backgroundView .cardView .noCard {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
 }
 
-.backgroundView .cardView  .addCardView {
-    /* padding: 20rpx; */
-    /* background-color: #4c87fd; */
-    color: #fff;
-    /* min-width: 150rpx; */
-    min-width: 200rpx;
-    height: 80rpx;
-    line-height: 80rpx;
-    text-align: center;
-    border-radius: 20rpx;
-    padding: 0 20rpx;
-    font-size: 34rpx;
-    font-weight: 600;
+.backgroundView .cardView .addCardView {
+  /* padding: 20rpx; */
+  /* background-color: #4c87fd; */
+  color: #fff;
+  /* min-width: 150rpx; */
+  min-width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+  font-size: 34rpx;
+  font-weight: 600;
 }
 
 
 .btnFather {
-    padding: 20rpx 0;
-    background-color: #fff;
-    margin: 10rpx 0;
+  padding: 20rpx 0;
+  background-color: #fff;
+  margin: 10rpx 0;
+  margin-top: 0;
 }
+
 .funcBtns {
-    width: 100%;
-    min-height: 180rpx;
-    /* padding: 20rpx 0; */
-    /* border: 1rpx solid #dbdbdb; */
-    margin-top: 10rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10rpx;
-    background-color: #fff;
+  width: 95%;
+  min-height: 180rpx;
+  /* padding: 20rpx 0; */
+  /* border: 1rpx solid #dbdbdb; */
+  /* margin-top: 10rpx; */
+  display: flex;
+  margin-left: 2.5%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rpx;
+  background-color: #fff;
 }
 
 .funcBtns .btns {
-    width: 48%;
-    height: 180rpx;
-    /* border: 1rpx solid #dbdbdb; */
-    margin: auto;
-    /* padding-top: 20rpx; */
-    /* border-radius: 30rpx; */
-    position: relative;
-    display: flex;
-    justify-items: center;
-    align-items: center;
+  width: 50%;
+  height: 180rpx;
+  /* border: 1rpx solid #dbdbdb; */
+  margin: auto;
+  /* padding-top: 20rpx; */
+  /* border-radius: 30rpx; */
+  position: relative;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
 .funcBtns .btns .bgImage {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .funcBtns .btns .title {
-    /* width: 60%; */
-    /* height: 40rpx; */
-    /* line-height: 40rpx; */
-    text-align: left;
-    /* margin-top: 20rpx; */
-    font-weight: 600;
-    z-index: 2;
-    /* position: relative; */
-    color: #fff;
-    margin-left: 30%;
-    margin-top: -2%;
-    /* top: 0;
+  /* width: 60%; */
+  /* height: 40rpx; */
+  /* line-height: 40rpx; */
+  text-align: left;
+  /* margin-top: 20rpx; */
+  font-weight: 600;
+  z-index: 2;
+  /* position: relative; */
+  color: #fff;
+  margin-left: 30%;
+  margin-top: -2%;
+  /* top: 0;
     left: 40%; */
 }
 
 .funcBtns .btns .title view:nth-child(1) {
-    font-size: 34rpx;
-    font-weight: 600;
-    height: 60rpx;
-    line-height: 60rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+  height: 60rpx;
+  line-height: 60rpx;
 }
 
 .funcBtns .btns .title view:nth-child(2) {
-    font-size: 26rpx;
-    font-weight: 0;
-    color: #ffffff;
+  font-size: 26rpx;
+  font-weight: 0;
+  color: #ffffff;
 }
 
 .banners {
-    width: 95%;
-    height: 180rpx;
-    border-radius: 20rpx;
-    margin-left: 2.5%;
-    border: 1rpx solid #dbdbdb;
-    margin-top: 30rpx;
+  width: 95%;
+  height: 180rpx;
+  border-radius: 20rpx;
+  margin-left: 2.5%;
+  border: 1rpx solid #dbdbdb;
+  margin-top: 30rpx;
 }
 
 .tabsView {
-    width: 100%;
-    min-height: 200rpx;
-    background-color: #fff;
-    /* margin-left: 2.5%; */
-    /* border: 1rpx solid #dbdbdb; */
-    display: flex;
-    flex-direction: row; /* 默认值，可以省略 */
-    flex-wrap: wrap;
+  width: 100%;
+  min-height: 200rpx;
+  background-color: #fff;
+  /* margin-left: 2.5%; */
+  /* border: 1rpx solid #dbdbdb; */
+  display: flex;
+  flex-direction: row;
+  /* 默认值，可以省略 */
+  flex-wrap: wrap;
 }
+
 .tabsView .funcBtnRows {
-    width: 24%;
-    /* margin: 2%; */
-    min-height: 140rpx;
-    /* border: 1rpx solid #dbdbdb; */
-    padding-top: 10rpx;
+  width: 24%;
+  /* margin: 2%; */
+  min-height: 140rpx;
+  /* border: 1rpx solid #dbdbdb; */
+  padding-top: 10rpx;
 }
 
 .tabsView .funcBtnRows .icon {
-    width: 80rpx;
-    height: 80rpx;
-    margin: 0 auto;
-    border-radius: 50%;
-    /* border: 1rpx solid #dbdbdb; */
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  /* border: 1rpx solid #dbdbdb; */
 }
 
 .tabsView .funcBtnRows .icon image {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .tabsView .funcBtnRows .titles {
-    width: 100%;
-    min-height: 40rpx;
-    line-height: 40rpx;
-    text-align: center;
-    font-size: 28rpx;
-    /* font-weight: 600; */
+  width: 100%;
+  min-height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 28rpx;
+  /* font-weight: 600; */
 }
 
 .bottomfuncView {
-    width: 100%;
-    min-height: 250rpx;
-    background-color: #fff;
-    margin-top: 10rpx;
-    padding-bottom: 20rpx;
+  width: 100%;
+  min-height: 250rpx;
+  background-color: #fff;
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
 }
+
 .bottomfuncView .bottomTitles {
-    width: 100%;
-    height: 80rpx;
-    line-height: 80rpx;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .bottomfuncView .bottomTitles view {
-    height: 40rpx;
-    line-height: 40rpx;
-    margin-left: 2.5%;
-    border-left: 8rpx solid rgb(252, 112, 25);
-    padding-left: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-left: 2.5%;
+  border-left: 8rpx solid rgb(252, 112, 25);
+  padding-left: 20rpx;
 }
 
 .bottomfuncView .gwViews {
-    width: 95%;
-    margin-left: 2.5%;
-    min-height: 180rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 95%;
+  margin-left: 2.5%;
+  min-height: 180rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.gwViews .c{
-    width: 48%;
-    height: 300rpx;
-    /* border: 1rpx solid #dbdbdb; */
-    margin: auto;
-    
+.gwViews .c {
+  width: 48%;
+  height: 300rpx;
+  /* border: 1rpx solid #dbdbdb; */
+  margin: auto;
+
 }
 
-.gwViews .l{
-    border-radius: 20rpx;
-    position: relative;
+.gwViews .l {
+  border-radius: 20rpx;
+  position: relative;
 }
 
 .gwViews .l image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .gwViews .l .title {
-    height: 100rpx;
-    /* margin-left: 2.5%; */
-    z-index: 2;
-    position: absolute;
-    line-height: 100rpx;
-    color: #0AACC7;
-    left: 5%;
-    font-size: 34rpx;
+  height: 100rpx;
+  /* margin-left: 2.5%; */
+  z-index: 2;
+  position: absolute;
+  line-height: 100rpx;
+  color: #0AACC7;
+  left: 5%;
+  font-size: 34rpx;
 }
 
 .gwViews .l .smallTitle {
-    height: 60rpx;
-    z-index: 2;
-    position: absolute;
-    line-height: 60rpx;
-    color: #0AACC7;
-    left: 5%;
-    top: 60rpx;
-    font-size: 26rpx;
-    color: #99999999;
+  height: 60rpx;
+  z-index: 2;
+  position: absolute;
+  line-height: 60rpx;
+  color: #0AACC7;
+  left: 5%;
+  top: 60rpx;
+  font-size: 26rpx;
+  color: #99999999;
 }
 
-.gwViews .r.c{
-    border: none;
+.gwViews .r.c {
+  border: none;
 }
 
 .gwViews .r.c .c-1 {
-    width: 100%;
-    height: 140rpx;
-    /* margin: 0 auto; */
-    /* border: 1rpx solid #dbdbdb; */
-    border-radius: 20rpx;
-    position: relative;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+  width: 100%;
+  height: 140rpx;
+  /* margin: 0 auto; */
+  /* border: 1rpx solid #dbdbdb; */
+  border-radius: 20rpx;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .gwViews .r.c .c-1 image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
 }
 
 .gwViews .r.c .c-1:nth-child(2) {
-    margin-top: 20rpx;
+  margin-top: 20rpx;
 }
 
 .gwViews .r.c .c-1 .smallTitles {
-    position: relative;
-    z-index: 2;
-    left: 20rpx;
+  position: relative;
+  z-index: 2;
+  left: 20rpx;
 }
 
 .gwViews .r.c .c-1 .smallTitles view:nth-child(1) {
-    font-size: 34rpx;
+  font-size: 34rpx;
 }
 
 .gwViews .r.c .c-1 .smallTitles view:nth-child(2) {
-    font-size: 26rpx;
-    color: #99999999;
+  font-size: 26rpx;
+  color: #99999999;
 }
 
 .gwViews .r.c .c-1 .smallTitles .other1 {
-    color: #ECB611;
+  color: #ECB611;
 }
 
-.gwViews .r.c .c-1 .smallTitles .other2{
-    color: #049D04;
+.gwViews .r.c .c-1 .smallTitles .other2 {
+  color: #049D04;
+}
+
+.ewm {
+  position: absolute;
+  top: 80rpx;
+  right: 30rpx;
+  /* border: 1rpx solid #fff; */
+}
+
+.ewm .ewmContent {
+  width: 184rpx;
+  height: 184rpx;
+  padding: 2rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: auto;
+  /* border: 1rpx solid #dbdbdb; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ewm .ewmContent .ewmView {
+  width: 100%;
+  height: 100%;
+}
+
+.ewm .ewmContent .myQrcode {
+  /* width: 100%;
+  height: 100%; */
+  /* transform-origin: center; */
+  /* transform: scale(0.6); */
+  margin-top: 110rpx;
+}
+.ewm .title {
+  width: 100%;
+  text-align: center;
+  color: #000;
 }

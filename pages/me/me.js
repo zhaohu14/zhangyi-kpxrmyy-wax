@@ -13,16 +13,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.setData({
-      cardInfo: getApp().globalData.cardInfo
-    })
-    this.creatEWM(getApp().globalData.cardInfo.PatId)
+    
   },
   onShow () {
     // console.log(getApp().globalData)
     // this.setData({
     //   cardInfo: getApp().globalData.cardInfo
     // })
+    this.setData({
+      cardInfo: getApp().globalData.cardInfo
+    })
+    // this.creatEWM(getApp().globalData.cardInfo.PatId)
   },
   creatEWM(value) {
     drawQrcode({
@@ -42,9 +43,13 @@ Page({
     })
   },
   toCardDetail() {
+    wx.setStorageSync('cardInfo', this.data.cardInfo)
     wx.navigateTo({
-      url: '/menzhen/cardDetail/cardDetail',
+        url: '/menzhen/cardDetail/cardDetail',
     })
+    // wx.navigateTo({
+    //   url: '/menzhen/cardDetail/cardDetail',
+    // })
   },
   toCardList() {
     wx.navigateTo({
@@ -52,8 +57,43 @@ Page({
     })
   },
   toyyjl() {
+    if (!this.data.cardInfo) {
+      return wx.showModal({
+        title: '温馨提示',
+        content: '您暂未绑定就诊卡，是否去绑定就诊卡',
+        confirmText: '去绑定',
+        cancelText: '暂不绑定',
+        success: res => {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/menzhen/addErhcCard/addErhcCard',
+            })
+          }
+        }
+      })
+    }
     wx.navigateTo({
       url: '/menzhen/yuyueList/yuyueList',
+    })
+  },
+  toJfjl () {
+    if (!this.data.cardInfo) {
+      return wx.showModal({
+        title: '温馨提示',
+        content: '您暂未绑定就诊卡，是否去绑定就诊卡',
+        confirmText: '去绑定',
+        cancelText: '暂不绑定',
+        success: res => {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/menzhen/addErhcCard/addErhcCard',
+            })
+          }
+        }
+      })
+    }
+    wx.navigateTo({
+      url: '/menzhen/paymentRecord/paymentRecord',
     })
   },
 
@@ -64,12 +104,6 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
 
   /**
    * 生命周期函数--监听页面隐藏

@@ -208,6 +208,32 @@ let matrimonyLsit = [
     code: '30'
   }
 ]
+let relList = [
+  {
+    value: '本人',
+    code: '1'
+  },
+  {
+    value: '父母',
+    code: '2'
+  },
+  {
+    value: '子女',
+    code: '3'
+  },
+  {
+    value: '夫妻',
+    code: '4'
+  },
+  {
+    value: '亲属',
+    code: '5'
+  },
+  {
+    value: '其他',
+    code: '6'
+  }
+]
 
 module.exports = {
     formatTime,
@@ -225,4 +251,5 @@ module.exports = {
     nationList: nation, // 民族字典值
     matrimonyLsit: matrimonyLsit, // 婚姻状态字典值
     jobList: jobList, // 工作字典
+    relList: relList, // 关系字典
 }

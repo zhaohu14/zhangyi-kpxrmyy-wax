@@ -1,0 +1,12 @@
+<view class="header">
+  <view class="headerContent" bind:tap="toAddZy">
+    <view class="left">当前住院信息：{{ zyCardInfo ? zyCardInfo.IPatId + '（' + '点击切换' + '）' : '点击绑定住院信息' }}</view>
+    <image class="cardImg" src="../../static/icon/card.png" mode="" />
+    <image src="../../static/icon/right.png" mode="" />
+  </view>
+  <view class="headerContent" bind:tap="toAddZy">
+    <view class="left">住院余额：{{ zyCardInfo ? zyCardInfo.Balc : '0' }}元</view>
+    <image class="cardImg" src="" mode="" />
+    <image src="" mode="" />
+  </view>
+</view>

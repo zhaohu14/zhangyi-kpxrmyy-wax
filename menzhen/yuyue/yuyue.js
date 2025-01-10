@@ -22,7 +22,8 @@ Page({
     selectTime: null,
     allPaiBai: [],
     selectPaiBan: null,
-    cardInfo: null
+    cardInfo: null,
+    cardList: []
   },
 
   /**
@@ -33,9 +34,21 @@ Page({
     obj.patIdShow = obj.PatId[0] + '************' + obj.PatId[obj.PatId.length - 1]
     obj.NameShow = obj.Name.length > 2 ? obj.Name[0] + '*' + obj.Name[obj.Name.length - 1] : obj.Name[0] + '*'
     this.setData({
-      cardInfo: obj
+      cardInfo: obj,
+      cardList: getApp().globalData.cardList
     })
     this.getTimeList(7)
+  },
+  swichSuccess (e) {
+    console.log(e)
+    let arr = this.data.cardList
+    arr.forEach(obj => {
+      obj.patIdShow = obj.PatId[0] + '************' + obj.PatId[obj.PatId.length - 1]
+      obj.NameShow = obj.Name.length > 2 ? obj.Name[0] + '*' + obj.Name[obj.Name.length - 1] : obj.Name[0] + '*'
+    })
+    this.setData({
+      cardInfo: arr[e.detail.value]
+    })
   },
   getTimeList(days) {
     this.setData({
@@ -170,7 +183,7 @@ Page({
         })
       }
       wx.reLaunch({
-        url: '/menzhen/yuyueDetail/yuyueDetail',
+        url: '/menzhen/yuyueList/yuyueList',
       })
     })
     // wx.navigateTo({

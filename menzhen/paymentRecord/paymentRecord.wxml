@@ -1,12 +1,13 @@
 <!--menzhen/paymentRecord/paymentRecord.wxml-->
-<view class="header">
+<!-- <view class="header">
     <view class="headerContent">
         <view class="left">当前就诊人：赵虎</view>
         <image class="cardImg" src="../../static/icon/card.png" mode=""/>
         <image src="../../static/icon/right.png" mode=""/>
     </view>
-</view>
-<view class="selectTime">
+</view> -->
+<userCard cardInfo="{{ cardInfo }}" bind:swichSuccess="swichSuccess"></userCard>
+<!-- <view class="selectTime">
     <view class="selectTimeContent">
         <view class="title">开始时间</view>
         <view class="time">
@@ -22,10 +23,17 @@
         </view>
         <view class="title">结束时间</view>
     </view>
+</view> -->
+<view class="rows" wx:for="{{ list }}">
+    <van-cell border="{{ false }}" icon="gold-coin" title="缴费成功"></van-cell>
+    <van-cell title="项目名称" value="{{ item.Name }}"></van-cell>
+    <van-cell title="数量" value="{{ item.Qty }}"></van-cell>
+    <van-cell title="缴费金额" value="{{ item.totalAmount + '元' }}"></van-cell>
+    <!-- <van-cell title="充值方式" value="微信支付"></van-cell> -->
+    <van-cell title="开单科室" value="{{ item.Dpt }}"></van-cell>
+    <van-cell title="开单医生" value="{{ item.Dr }}"></van-cell>
+    <van-cell title="开单时间" value="{{ item.Time }}"></van-cell>
 </view>
-<view class="rows" wx:for="{{ 5 }}">
-    <van-cell border="{{ false }}" icon="gold-coin" title="充值成功"></van-cell>
-    <van-cell title="充值金额" value="20元"></van-cell>
-    <van-cell title="充值方式" value="微信支付"></van-cell>
-    <van-cell title="充值时间" value="2022-09-20 15:33"></van-cell>
+<view class="noData" wx:if="{{ list.length === 0 }}">
+暂无记录
 </view>

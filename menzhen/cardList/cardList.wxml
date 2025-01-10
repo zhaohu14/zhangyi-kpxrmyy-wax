@@ -1,13 +1,14 @@
 <view class="rows" wx:for="{{ cardList }}" wx:key="{{ index }}">
-    <card isDZJKK="{{ item.isDZJKK }}" cardInfo="{{ item }}">
+    <card isDZJKK="{{ item.isDZJKK }}" cardInfo="{{ item }}" showSwitch="{{ true }}">
         <view class="ewm">
-            <view class="ewmContent" bind:tap="toCardDetail">
-                <canvas class='myQrcode' canvas-id="{{ 'myQrcode' + index }}"></canvas>
+            <view class="ewmContent" bind:tap="toCardDetail" data-item="{{ item }}">
+                <!-- <canvas class='myQrcode' canvas-id="{{ 'myQrcode' + index }}"></canvas> -->
+                <image class="ewmView" src="../../static/ewm.png" mode=""/>
             </view>
-            <view class="title">就诊卡二维码</view>
+            <view class="title">查看详情</view>
 
         </view>
     </card>
 </view>
 
-<view class="btns">添加健康卡/就诊卡</view>
+<view class="btns" bind:tap="toAddCard">添加健康卡/就诊卡</view>

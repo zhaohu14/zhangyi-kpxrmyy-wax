@@ -66,6 +66,18 @@
 </van-field>
 
 <van-field
+    value="{{ rel }}"
+    required
+    readonly
+    label="关系"
+    placeholder="请选择该卡与本人关系"
+>
+    <van-button bind:tap="changShowPicker" data-type="rel" data-list="relList" slot="button" size="small" type="info">
+      点击选择关系
+    </van-button>
+</van-field>
+
+<van-field
     value="{{ mobile }}"
     required
     clearable

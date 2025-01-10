@@ -1,84 +1,86 @@
 <view class="doctorInfo">
-    <view class="images">
-        <image src="../../static/icon/doctor.png" alt="" />
-    </view>
-    <view class="doctorName">{{ allPaiBai.DrName }}</view>
-    <!-- <view class="remake">简介：皮肤科门诊。能够用科学或技术的手段来处理人类疾病，预防出生缺陷提高人口素质，治病救人改善病患人类生活质量，并以习研究医学</view> -->
+  <view class="images">
+    <image src="../../static/icon/doctor.png" alt="" />
+  </view>
+  <view class="doctorName">{{ allPaiBai.DrName }}</view>
+  <!-- <view class="remake">简介：皮肤科门诊。能够用科学或技术的手段来处理人类疾病，预防出生缺陷提高人口素质，治病救人改善病患人类生活质量，并以习研究医学</view> -->
 </view>
 
 <view class="selectDate">
-    <view class="{{ selectDate === item.time ? 'dateRows y' : 'dateRows' }}" wx:for="{{ dates }}">
-        <view class="rowsViews" bind:tap="changeTimes" data-item="{{ item }}">
-            <view>{{ item.date }}</view>
-            <view>{{ item.name }}</view>
-        </view>
+  <view class="{{ selectDate === item.time ? 'dateRows y' : 'dateRows' }}" wx:for="{{ dates }}">
+    <view class="rowsViews" bind:tap="changeTimes" data-item="{{ item }}">
+      <view>{{ item.date }}</view>
+      <view>{{ item.name }}</view>
     </view>
+  </view>
 </view>
 
 <view class="paibanRows" wx:for="{{ paibanList }}" bind:tap="paibanTap" data-item="{{ item }}">
-    <view class="content">
-        <view class="paibanDate">{{ item.ScheDate }}</view>
-        <view class="paibanBtom">
-            <view>{{ item.SessionName + "（" + item.Price + '元' + "）" }}</view>
-            <view>{{ '余' + item.RemainNo + '号' }}</view>
-        </view>
+  <view class="content">
+    <view class="paibanDate">{{ item.ScheDate }}</view>
+    <view class="paibanBtom">
+      <view>{{ item.SessionName + "（" + item.Price + '元' + "）" }}</view>
+      <view>{{ '余' + item.RemainNo + '号' }}</view>
     </view>
-    <image src="../../static/icon/right.png" mode="" />
+  </view>
+  <image src="../../static/icon/right.png" mode="" />
 </view>
 
 <view class="yyDetail" wx:if="{{ showDetail }}">
-    <view class="yyDetailContent">
-        <view class="titles">预约详情</view>
-        <view class="userInfo">
-            <view>就诊人</view>
-            <view>{{ cardInfo.patIdShow }}|{{ cardInfo.NameShow }}</view>
-            <image src="../../static/icon/right.png" mode="" />
-        </view>
-        <view class="yyInfo">
-            <view class="yyRows">
-                <view>科室</view>
-                <view>{{ allPaiBai.deptName }}</view>
-            </view>
-            <view class="yyRows">
-                <view>费用</view>
-                <view style="color: red;">{{ selectPaiBan.Price }}元</view>
-            </view>
-            <view class="yyRows">
-                <view>就诊地点</view>
-                <view>柯坪县人民医院</view>
-            </view>
-            <view class="yyRows">
-                <view>就诊日期</view>
-                <view>{{ selectPaiBan.ScheDate }}</view>
-            </view>
-            <view class="yyRows" bind:tap="showSelectTimes">
-                <view>就诊时间</view>
-                <view>{{ selectTime ? selectTime.Seg : '点击选择预约时间' }}</view>
-            </view>
-        </view>
-        <view class="btns">
-            <view bind:tap="confirmYuYue">确认挂号</view>
-            <view bind:tap="cancle">取消</view>
-        </view>
+  <view class="yyDetailContent">
+    <view class="titles">预约详情</view>
+    <picker mode="selector" range="{{ cardList }}" range-key="Name" bindchange="swichSuccess">
+      <view class="userInfo">
+        <view>就诊人</view>
+        <view>{{ cardInfo.patIdShow }}|{{ cardInfo.NameShow }}</view>
+        <image src="../../static/icon/right.png" mode="" />
+      </view>
+    </picker>
+    <view class="yyInfo">
+      <view class="yyRows">
+        <view>科室</view>
+        <view>{{ allPaiBai.deptName }}</view>
+      </view>
+      <view class="yyRows">
+        <view>费用</view>
+        <view style="color: red;">{{ selectPaiBan.Price }}元</view>
+      </view>
+      <view class="yyRows">
+        <view>就诊地点</view>
+        <view>柯坪县人民医院</view>
+      </view>
+      <view class="yyRows">
+        <view>就诊日期</view>
+        <view>{{ selectPaiBan.ScheDate }}</view>
+      </view>
+      <view class="yyRows" bind:tap="showSelectTimes">
+        <view>就诊时间</view>
+        <view>{{ selectTime ? selectTime.Seg : '点击选择预约时间' }}</view>
+      </view>
     </view>
+    <view class="btns">
+      <view bind:tap="confirmYuYue">确认挂号</view>
+      <view bind:tap="cancle">取消</view>
+    </view>
+  </view>
 
 </view>
 
 <view class="timeDetail" wx:if="{{ showTimeDetail }}">
-    <view class="timeContent">
-        <view class="timeTitles">请选择预约时间</view>
-        <view class="selectTime">
-            <view class="timeRows" wx:for="{{ timeList }}" bind:tap="changSelectTimes" data-index="{{ index }}">
-                <view class="selectView">
-                    <image wx:if="{{ item.select }}" src="../../static/icon/select.png" mode=""/>
-                </view>
-                <view class="timeView">{{ item.Seg + '（' + item.Seq + '号' + '）' }}</view>
-            </view>
+  <view class="timeContent">
+    <view class="timeTitles">请选择预约时间</view>
+    <view class="selectTime">
+      <view class="timeRows" wx:for="{{ timeList }}" bind:tap="changSelectTimes" data-index="{{ index }}">
+        <view class="selectView">
+          <image wx:if="{{ item.select }}" src="../../static/icon/select.png" mode="" />
         </view>
-        <view class="timeBtns">
-            <view bind:tap="cancelTimeSelect">取消</view>
-            <view bind:tap="confrimTime">确认</view>
-        </view>
+        <view class="timeView">{{ item.Seg + '（' + item.Seq + '号' + '）' }}</view>
+      </view>
     </view>
-    
+    <view class="timeBtns">
+      <view bind:tap="cancelTimeSelect">取消</view>
+      <view bind:tap="confrimTime">确认</view>
+    </view>
+  </view>
+
 </view>

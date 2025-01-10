@@ -52,6 +52,7 @@ page {
   justify-content: center;
   align-items: center;
   border-bottom: 1rpx solid #dbdbdb;
+  padding: 10rpx 0;
 }
 
 .rows .date {
@@ -64,17 +65,20 @@ page {
 }
 
 .rows .center {
-  width: calc(100% - 180rpx);
+  width: calc(100% - 10rpx);
   padding-left: 20rpx;
 }
 
 .rows .center view {
-  height: 40rpx;
+  min-height: 40rpx;
   line-height: 40rpx;
+  font-size: 30rpx;
   /* margin-bottom: auto; */
 }
 .rows .center view:nth-child(2) {
-  color: red;
+  /* color: red; */
+  color: #7e7e7e;
+  font-size: 28rpx;
 }
 
 .rows .right {
@@ -103,4 +107,13 @@ page {
 .switchTypeView view.y {
   background-color: #4C87FD;
   color: #fff;
+}
+.noData {
+  width: 100%;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #7e7e7e;
 }

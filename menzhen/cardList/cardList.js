@@ -6,18 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        cardList: [{
-                name: '赵虎',
-                jzCardNo: '001',
-                idCardNo: '654225********2514',
-                isDZJKK: true
-            },
-            {
-                name: '贺永芳',
-                jzCardNo: '002',
-                idCardNo: '622428********5825',
-                isDZJKK: false
-            }
+        cardList: [
         ]
     },
 
@@ -25,9 +14,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        this.setData({
+          cardList: getApp().globalData.cardList
+        })
         setTimeout(() => {
             this.data.cardList.forEach((ret, index) => {
-                this.creatEWM('123456', 'myQrcode' + index)
+                this.creatEWM(ret.PatId, 'myQrcode' + index)
             })
         }, 2000)
     },
@@ -50,10 +42,16 @@ Page({
         })
     },
 
-    toCardDetail() {
+    toCardDetail(e) {
+        wx.setStorageSync('cardInfo', e.currentTarget.dataset.item)
         wx.navigateTo({
             url: '/menzhen/cardDetail/cardDetail',
         })
+    },
+    toAddCard () {
+      wx.navigateTo({
+        url: '/menzhen/addErhcCard/addErhcCard',
+      })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

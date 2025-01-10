@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "zyUserCard": "../../compents/zyUserCard/zyUserCard",
+    "userCard": "../../compents/userCard/userCard"
+  },
+  "navigationBarTitleText": "住院账单"
+}
