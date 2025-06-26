@@ -74,6 +74,9 @@ module.exports = {
   queryCheckList: data => { // 获取住院充值记录
     return requestByHeader('/Web/QryIPChargeRecord', data, 'POST')
   },
+  qryIPBill: data => { // 查询电子发票列表
+    return requestByHeader('/Web/QryIPBill', data, 'POST')
+  },
   
   
   

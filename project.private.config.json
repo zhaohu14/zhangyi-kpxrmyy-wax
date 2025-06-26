@@ -3,9 +3,9 @@
   "projectname": "zhangyi-kpxrmyy-wax",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": true
+    "urlCheck": false
   },
-  "libVersion": "3.7.1",
+  "libVersion": "3.8.10",
   "condition": {
     "miniprogram": {
       "list": [

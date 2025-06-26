@@ -41,12 +41,12 @@ Page({
         url: '/menzhen/paymentRecord/paymentRecord',
         id: 14
       },
-      // {
-      //   title: '电子发票开具',
-      //   icon: '../../static/home/15.png',
-      //   url: '',
-      //   id: 15
-      // },
+      {
+        title: '电子发票开具',
+        icon: '../../static/home/15.png',
+        url: '/menzhen/dzfpList/dzfpList',
+        id: 15
+      },
       // {
       //   title: '电子发票查询',
       //   icon: '../../static/home/16.png',
